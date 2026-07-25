@@ -1,2 +1,4 @@
+# Review-stage deployment — not the live public site.
+# Remove this file (or replace with an Allow rule) before going live.
 User-agent: *
-Allow: /
+Disallow: /

@@ -25,6 +25,9 @@ export const Route = createRootRoute({
       { name: "description", content: DESCRIPTION },
       { name: "author", content: "RapidLink Medical Group PC" },
       { name: "referrer", content: "strict-origin-when-cross-origin" },
+      // Review-stage deployment. Remove this (and the Disallow in
+      // public/robots.txt) when the site goes live on its real domain.
+      { name: "robots", content: "noindex, nofollow" },
       { property: "og:title", content: "RapidLink Medical — For Personal Injury Attorneys" },
       { property: "og:description", content: DESCRIPTION },
       { property: "og:type", content: "website" },

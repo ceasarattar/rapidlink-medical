@@ -17,11 +17,11 @@ import {
 export const Route = createFileRoute("/attorneys")({
   head: () => ({
     meta: [
-      { title: "Attorney-Ready Medical Intake in 24–48 Hours — RapidLink Medical" },
+      { title: "Attorney-Ready Medical Intake in 24-48 Hours | RapidLink Medical" },
       {
         name: "description",
         content:
-          "Physician-led, 24–48 hour medical intake and reporting for Indiana personal injury attorneys. Spanish-speaking clients welcome. Coordinated imaging, PT, and specialist referrals.",
+          "Physician-led, 24-48 hour medical intake and reporting for Indiana personal injury attorneys. Spanish-speaking clients welcome. Coordinated imaging, PT, and specialist referrals.",
       },
     ],
   }),
@@ -38,11 +38,11 @@ function Attorneys() {
             For Personal Injury Attorneys
           </p>
           <h1 className="mt-5 max-w-3xl text-4xl font-semibold tracking-tight sm:text-5xl">
-            Physician-grade medical intake for your PI clients — fully turned around in 24–48 hours.
+            Physician-grade medical intake for your PI clients, fully turned around in 24-48 hours.
           </h1>
           <p className="mt-6 max-w-2xl text-base text-primary-foreground/85">
             A board-certified internal medicine physician handles intake, coordinates imaging and
-            specialists, and delivers a clean, defensible report — all within two business days, all
+            specialists, and delivers a clean, defensible report. All within two business days, all
             by telemedicine, all in Indiana.
           </p>
           <div className="mt-9 flex flex-wrap gap-3">
@@ -69,20 +69,20 @@ function Attorneys() {
             What we do for your client that the mill clinics don't
           </p>
           <h2 className="mt-3 text-3xl font-semibold text-foreground sm:text-4xl">
-            A complete, comprehensive medical intake — in 24–48 hours.
+            A complete, comprehensive medical intake, in 24-48 hours.
           </h2>
           <p className="mt-4 text-muted-foreground">
             Mill clinics drag out treatment, hand your client off between providers, and hand you
             back patchy records weeks later. We do the opposite: one board-certified physician, one
-            complete intake, one clean record — fast.
+            complete intake, one clean record, delivered fast.
           </p>
         </div>
 
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           <Value
             Icon={Clock}
-            title="24–48 hour turnaround"
-            body="Initial evaluation, report, imaging coordination, and referrals — all completed within two business days."
+            title="24-48 hour turnaround"
+            body="Initial evaluation, report, imaging coordination, and referrals, all completed within two business days."
           />
           <Value
             Icon={Stethoscope}
@@ -92,7 +92,7 @@ function Attorneys() {
           <Value
             Icon={Network}
             title="Coordinated referrals"
-            body="Direct routing to physical therapy, pain management, orthopedics, and other specialists — pre-vetted partners."
+            body="Direct routing to pre-vetted partners in physical therapy, pain management, orthopedics, and other specialties."
           />
           <Value
             Icon={FileText}
@@ -107,7 +107,7 @@ function Attorneys() {
           <Value
             Icon={Smartphone}
             title="One click for your client"
-            body="We send a single secure link. Intake, consents, and visit — done from their phone."
+            body="We send a single secure link. Intake, consents, and visit, all done from their phone."
           />
           <Value
             Icon={Scale}
@@ -117,7 +117,7 @@ function Attorneys() {
           <Value
             Icon={ShieldCheck}
             title="HIPAA-compliant, end-to-end"
-            body="Intake, visit, records, and reports all run through our HIPAA-compliant eClinicalWorks system — never through this website."
+            body="Intake, visit, records, and reports all run through our HIPAA-compliant eClinicalWorks system, never through this website."
           />
         </div>
       </section>
@@ -139,22 +139,22 @@ function Attorneys() {
               {
                 n: "Step One",
                 t: "You refer the client",
-                d: "Call or email us with the basics — no health details needed to start.",
+                d: "Call or email us with the basics. No health details needed to start.",
               },
               {
                 n: "Step Two",
                 t: "We send one secure link",
-                d: "By text or email, direct to your client — works on any phone.",
+                d: "By text or email, direct to your client. Works on any phone.",
               },
               {
                 n: "Step Three",
                 t: "Client completes intake & visit",
-                d: "Intake, consents, and video visit — in English or Spanish.",
+                d: "Intake, consents, and video visit, in English or Spanish.",
               },
               {
                 n: "Step Four",
                 t: "Report delivered to your office",
-                d: "Signed physician report plus imaging coordination within 24–48 hours.",
+                d: "Signed physician report plus imaging coordination within 24-48 hours.",
               },
             ].map((s) => (
               <li key={s.n} className="rounded-2xl border border-border bg-card p-6">
@@ -173,12 +173,12 @@ function Attorneys() {
           <InfoCard
             Icon={Car}
             title="Heavy MVA experience"
-            body="A large portion of our PI practice is motor vehicle accident cases — neck, back, soft-tissue, post-concussive, and beyond."
+            body="A large portion of our PI practice is motor vehicle accident cases: neck, back, soft-tissue, post-concussive, and beyond."
           />
           <InfoCard
             Icon={MapPin}
             title="Indiana, telemedicine only"
-            body="Currently accepting Indiana-based clients only, fully via telemedicine. No in-person clinic visits — your client never has to drive anywhere."
+            body="Currently accepting Indiana-based clients only, fully via telemedicine. No in-person clinic visits, so your client never has to drive anywhere."
           />
           <InfoCard
             Icon={Network}

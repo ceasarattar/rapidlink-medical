@@ -14,11 +14,11 @@ import {
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "RapidLink Medical — Medical Intake for Indiana PI Attorneys" },
+      { title: "RapidLink Medical | Medical Intake for Indiana PI Attorneys" },
       {
         name: "description",
         content:
-          "Board-certified physician-led medical intake, imaging coordination, and attorney-ready reporting for Indiana personal injury attorneys. 24–48 hour turnaround. LOP accepted.",
+          "Board-certified physician-led medical intake, imaging coordination, and attorney-ready reporting for Indiana personal injury attorneys. 24-48 hour turnaround. LOP accepted.",
       },
     ],
   }),
@@ -40,8 +40,8 @@ function Home() {
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-primary-foreground/85">
             A board-certified internal medicine physician performs the intake, coordinates imaging
-            and specialists, and delivers a clean, defensible report — within two business days,
-            entirely by telemedicine.
+            and specialists, and delivers a clean, defensible report, all within two business
+            days and entirely by telemedicine.
           </p>
           <div className="mt-9 flex flex-wrap items-center gap-3">
             <Link
@@ -90,15 +90,15 @@ function Home() {
           </h2>
           <p className="mt-4 text-muted-foreground">
             Mill clinics stretch out treatment, pass your client between providers, and hand you
-            patchy records weeks later. We do the opposite — and we do it fast.
+            patchy records weeks later. We do the opposite, and we do it fast.
           </p>
         </div>
 
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           <Card
             Icon={Clock}
-            title="24–48 hour turnaround"
-            body="Initial evaluation, physician report, imaging coordination, and referrals — completed within two business days."
+            title="24-48 hour turnaround"
+            body="Initial evaluation, physician report, imaging coordination, and referrals, all completed within two business days."
           />
           <Card
             Icon={Stethoscope}
@@ -122,7 +122,7 @@ function Home() {
           />
           <Card
             Icon={ShieldCheck}
-            title="Telemedicine — no travel"
+            title="Telemedicine, no travel"
             body="Your client is seen from their phone, anywhere in Indiana. No driving across town, no waiting rooms."
           />
         </div>
@@ -145,7 +145,7 @@ function Home() {
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-muted-foreground">
             Call or email and we'll open intake the same day. Please don't send medical records or
-            client health details by email — we'll send a secure link instead.
+            client health details by email. We'll send a secure link instead.
           </p>
           <div className="mt-7 flex flex-wrap justify-center gap-3">
             <a

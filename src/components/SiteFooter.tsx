@@ -41,7 +41,7 @@ export function SiteFooter() {
         <div className="mt-10 space-y-2 border-t border-border pt-6 text-xs text-muted-foreground">
           <p>
             This website is informational only. It does not collect, transmit, or store protected
-            health information, and nothing submitted through it creates a physician–patient
+            health information, and nothing submitted through it creates a physician-patient
             relationship. Clinical intake and all patient records are handled exclusively inside our
             HIPAA-compliant eClinicalWorks system.
           </p>

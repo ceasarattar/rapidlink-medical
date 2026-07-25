@@ -12,9 +12,9 @@ import appCss from "../styles.css?url";
 import { SiteHeader } from "../components/SiteHeader";
 import { SiteFooter } from "../components/SiteFooter";
 
-const TITLE = "RapidLink Medical — Attorney-Ready Medical Intake in 24–48 Hours";
+const TITLE = "RapidLink Medical | Attorney-Ready Medical Intake in 24-48 Hours";
 const DESCRIPTION =
-  "Physician-led medical intake and reporting for Indiana personal injury attorneys. Board-certified MD, 24–48 hour turnaround, Letters of Protection accepted.";
+  "Physician-led medical intake and reporting for Indiana personal injury attorneys. Board-certified MD, 24-48 hour turnaround, Letters of Protection accepted.";
 
 export const Route = createRootRoute({
   head: () => ({
@@ -28,7 +28,7 @@ export const Route = createRootRoute({
       // Review-stage deployment. Remove this (and the Disallow in
       // public/robots.txt) when the site goes live on its real domain.
       { name: "robots", content: "noindex, nofollow" },
-      { property: "og:title", content: "RapidLink Medical — For Personal Injury Attorneys" },
+      { property: "og:title", content: "RapidLink Medical | For Personal Injury Attorneys" },
       { property: "og:description", content: DESCRIPTION },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },

@@ -10,7 +10,7 @@ export default defineConfig({
     tailwindcss(),
     // The site has no server functions, no data loaders, and no dynamic
     // content, so every route is prerendered to static HTML at build time.
-    // There is no server runtime in production — `dist/client` is the
+    // There is no server runtime in production; `dist/client` is the
     // entire deployable artifact. Security headers therefore live in
     // vercel.json rather than in request middleware.
     tanstackStart({

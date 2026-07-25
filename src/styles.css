@@ -22,7 +22,7 @@
   --color-surface: var(--surface);
   --color-surface-foreground: var(--surface-foreground);
 
-  /* System font stacks — no third-party font requests, so no visitor IP
+  /* System font stacks, so no third-party font requests and no visitor IP
      is disclosed to an external CDN on page load. */
   --font-sans:
     ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial,
@@ -41,7 +41,7 @@
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.24 0 0);
 
-  /* deep teal #0F4C5C — matches the logo mark */
+  /* deep teal #0F4C5C, matches the logo mark */
   --primary: oklch(0.39 0.05 215);
   --primary-foreground: oklch(0.98 0.005 85);
 

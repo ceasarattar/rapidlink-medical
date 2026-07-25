@@ -9,7 +9,6 @@ import {
   Languages,
   Smartphone,
   MapPin,
-  Gavel,
   Car,
   Phone,
   Mail,
@@ -119,11 +118,6 @@ function Attorneys() {
             Icon={ShieldCheck}
             title="HIPAA-compliant, end-to-end"
             body="Intake, visit, records, and reports all run through our HIPAA-compliant eClinicalWorks system — never through this website."
-          />
-          <Value
-            Icon={Gavel}
-            title="Never been deposed"
-            body="Clean professional record. The physician has not been deposed for any prior case."
           />
         </div>
       </section>

@@ -20,9 +20,6 @@ export function SiteFooter() {
             <Link to="/" className="text-primary-foreground/85 hover:text-accent">
               Home
             </Link>
-            <Link to="/attorneys" className="text-primary-foreground/85 hover:text-accent">
-              For Attorneys
-            </Link>
             <a href="tel:+13179534628" className="text-primary-foreground/85 hover:text-accent">
               (317) 953-4628
             </a>

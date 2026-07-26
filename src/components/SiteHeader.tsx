@@ -4,10 +4,9 @@ import { Wordmark } from "./Wordmark";
 
 export function SiteHeader() {
   return (
-    // Deep teal to match the logo artwork. Deliberately borderless: on both
-    // pages the hero directly below is also bg-primary, so the bar merges
-    // into it at rest and only reads as a distinct bar once scrolled over
-    // the light page body.
+    // Deep teal to match the logo artwork. Deliberately borderless: the hero
+    // directly below is also bg-primary, so the bar merges into it at rest
+    // and only reads as a distinct bar once scrolled over the light page body.
     <header className="sticky top-0 z-50 w-full bg-primary text-primary-foreground">
       <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link to="/" aria-label="RapidLink Medical Group, home">
@@ -15,13 +14,6 @@ export function SiteHeader() {
         </Link>
 
         <nav className="flex items-center gap-4 sm:gap-7">
-          <Link
-            to="/attorneys"
-            className="text-sm font-medium text-primary-foreground/85 hover:text-accent"
-            activeProps={{ className: "text-accent" }}
-          >
-            For Attorneys
-          </Link>
           <a
             href="tel:+13179534628"
             className="inline-flex h-10 items-center gap-2 rounded-md bg-accent px-4 text-sm font-semibold text-accent-foreground hover:brightness-95"

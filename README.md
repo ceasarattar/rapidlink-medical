@@ -63,7 +63,7 @@ production only; `npm run preview` will not show them.
 
 ## Deploying
 
-The build prerenders both routes and emits a fully static site to `dist/client`.
+The build prerenders the site and emits fully static output to `dist/client`.
 `vercel.json` pins the build command, output directory, and headers, so importing the
 repo into Vercel needs no further setup. Requires Node 22.x or later on the build image.
 
@@ -84,8 +84,7 @@ engines in two places. Remove both when the site launches on its real domain:
 src/
   routes/
     __root.tsx      app shell, <head>, error + 404 boundaries
-    index.tsx       home, attorney-facing pitch
-    attorneys.tsx   referral process, capabilities, contact
+    index.tsx       landing page: referral process, capabilities, contact
   components/       SiteHeader, SiteFooter
   styles.css        Tailwind theme tokens
 public/             favicon, robots.txt

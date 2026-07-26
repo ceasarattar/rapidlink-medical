@@ -1,5 +1,18 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, ShieldCheck, FileText, UserPlus, Video, Phone, Mail } from "lucide-react";
+import { createFileRoute } from "@tanstack/react-router";
+import {
+  Clock,
+  FileText,
+  ShieldCheck,
+  Stethoscope,
+  Network,
+  Scale,
+  Languages,
+  Smartphone,
+  MapPin,
+  Car,
+  Phone,
+  Mail,
+} from "lucide-react";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -19,210 +32,244 @@ function Home() {
   return (
     <div>
       {/* Hero */}
-      <section className="bg-primary text-primary-foreground">
-        <div className="mx-auto max-w-4xl px-4 pb-24 pt-20 text-center sm:px-6 sm:pt-24 lg:px-8">
+      <section className="border-b border-border bg-primary text-primary-foreground">
+        <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
           <p className="text-xs font-medium uppercase tracking-[0.2em] text-accent">
-            For personal injury attorneys in Indiana
+            For Personal Injury Attorneys
           </p>
-          <h1 className="mt-6 text-4xl font-semibold tracking-tight sm:text-5xl md:text-6xl">
-            Medical intake for injury clients,{" "}
-            <span className="font-serif italic">turned around in two business days.</span>
+          <h1 className="mt-5 max-w-3xl text-4xl font-semibold tracking-tight sm:text-5xl">
+            What happens after you send us a client.
           </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-lg text-primary-foreground/85">
-            A board-certified internal medicine physician sees your client by telemedicine and sends
-            you a signed report. Imaging and specialist referrals are arranged at the same time. We
-            accept Letters of Protection, so your client pays nothing up front.
+          <p className="mt-6 max-w-2xl text-base text-primary-foreground/85">
+            A board-certified internal medicine physician handles the intake personally and signs
+            the report. Imaging and specialist referrals are set up while the case is still fresh.
+            Everything happens by telemedicine, anywhere in Indiana.
           </p>
-          <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Link
-              to="/attorneys"
+          <div className="mt-9 flex flex-wrap gap-3">
+            <a
+              href="tel:+13179534628"
               className="inline-flex h-12 items-center gap-2 rounded-md bg-accent px-6 text-base font-semibold text-accent-foreground hover:brightness-95"
             >
-              See how referrals work <ArrowRight className="h-4 w-4" />
-            </Link>
-            <a
-              href="tel:+13179534628"
-              className="inline-flex h-12 items-center gap-2 rounded-md border border-primary-foreground/30 px-6 text-base font-semibold hover:bg-primary-foreground/10"
-            >
               <Phone className="h-4 w-4" /> (317) 953-4628
+            </a>
+            <a
+              href="#contact"
+              className="inline-flex h-12 items-center rounded-md border border-primary-foreground/30 px-6 text-base font-semibold hover:bg-primary-foreground/10"
+            >
+              Refer a client
             </a>
           </div>
         </div>
       </section>
 
-      {/* Trust strip */}
-      <section className="border-b border-border bg-surface">
-        <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-8">
-          <ul className="grid grid-cols-2 gap-6 text-sm md:grid-cols-4">
+      {/* Differentiators */}
+      <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-3xl text-center">
+          <p className="text-xs font-medium uppercase tracking-[0.18em] text-primary">
+            Where we differ from the mill clinics
+          </p>
+          <h2 className="mt-3 text-3xl font-semibold text-foreground sm:text-4xl">
+            Everything the case needs from the first visit.
+          </h2>
+          <p className="mt-4 text-muted-foreground">
+            Mill clinics stretch treatment out over months and hand you incomplete records well
+            after you needed them. We run it differently. One physician handles the whole intake,
+            and the records are on your desk in two business days.
+          </p>
+        </div>
+
+        <div className="mt-12 grid gap-6 md:grid-cols-3">
+          <Value
+            Icon={Clock}
+            title="24-48 hour turnaround"
+            body="Evaluation, signed report, imaging orders, and referrals are all finished inside two business days."
+          />
+          <Value
+            Icon={Stethoscope}
+            title="Done by an MD, not a tech"
+            body="A board-certified internal medicine physician runs the intake personally, so the documentation holds up if the other side challenges it."
+          />
+          <Value
+            Icon={Network}
+            title="Coordinated referrals"
+            body="Direct routing to pre-vetted partners in physical therapy, pain management, orthopedics, and other specialties."
+          />
+          <Value
+            Icon={FileText}
+            title="MRI & CT imaging arranged"
+            body="We coordinate with imaging partners including Reyes MRI and Affordable MRI to get your client scanned quickly."
+          />
+          <Value
+            Icon={Languages}
+            title="Spanish-speaking clients welcome"
+            body="Spanish translator available for the visit, and the intake can be completed in Spanish."
+          />
+          <Value
+            Icon={Smartphone}
+            title="One click for your client"
+            body="One secure link covers intake, consents, and the visit itself. Your client does it from their phone."
+          />
+          <Value
+            Icon={Scale}
+            title="Letter of Protection accepted"
+            body="No upfront cost to your client. We work on LOP for qualifying cases."
+          />
+          <Value
+            Icon={ShieldCheck}
+            title="Records stay in the EHR"
+            body="The visit, the chart, and the report all live in our HIPAA-compliant eClinicalWorks system. Nothing clinical touches this website."
+          />
+        </div>
+      </section>
+
+      {/* Process */}
+      <section className="bg-surface">
+        <div className="mx-auto max-w-5xl px-4 py-20 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-3xl text-center">
+            <h2 className="text-3xl font-semibold text-foreground sm:text-4xl">
+              What your client has to do
+            </h2>
+            <p className="mt-4 text-muted-foreground">
+              Your client never has to drive anywhere or sit in a waiting room. Everything happens
+              on their phone, in English or Spanish.
+            </p>
+          </div>
+          <ol className="mt-12 grid gap-6 md:grid-cols-4">
             {[
-              "Board-certified internal medicine",
-              "Licensed in Indiana",
-              "Letters of Protection accepted",
-              "Records kept in a HIPAA-compliant EHR",
-            ].map((label) => (
-              <li key={label} className="flex items-start gap-3">
-                <ShieldCheck className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
-                <span className="font-medium text-foreground">{label}</span>
+              {
+                n: "Step One",
+                t: "You refer the client",
+                d: "Call or email us with the basics. No health details needed to start.",
+              },
+              {
+                n: "Step Two",
+                t: "We send one secure link",
+                d: "By text or email, direct to your client. Works on any phone.",
+              },
+              {
+                n: "Step Three",
+                t: "Client completes intake & visit",
+                d: "Intake, consents, and video visit, in English or Spanish.",
+              },
+              {
+                n: "Step Four",
+                t: "Report delivered to your office",
+                d: "Signed physician report plus imaging coordination within 24-48 hours.",
+              },
+            ].map((s) => (
+              <li key={s.n} className="rounded-2xl border border-border bg-card p-6">
+                <div className="font-serif text-xl text-muted-foreground">{s.n}</div>
+                <div className="mt-2 text-base font-semibold text-foreground">{s.t}</div>
+                <div className="mt-1 text-sm text-muted-foreground">{s.d}</div>
               </li>
             ))}
-          </ul>
+          </ol>
         </div>
       </section>
 
-      {/* Fork */}
-      <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
-            Where would you like to start?
-          </h2>
-          <p className="mt-3 text-muted-foreground">
-            Read how it works, or send us a case right now.
-          </p>
+      {/* Coverage */}
+      <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
+        <div className="grid gap-6 md:grid-cols-3">
+          <InfoCard
+            Icon={Car}
+            title="Heavy MVA experience"
+            body="A large portion of our PI practice is motor vehicle accident cases: neck, back, soft-tissue, post-concussive, and beyond."
+          />
+          <InfoCard
+            Icon={MapPin}
+            title="Indiana, telemedicine only"
+            body="Currently accepting Indiana-based clients only, fully via telemedicine. No in-person clinic visits, so your client never has to drive anywhere."
+          />
+          <InfoCard
+            Icon={Network}
+            title="Imaging & specialist network"
+            body="MRI/CT coordination with Reyes MRI, Affordable MRI, and others. Pain management and specialist referrals on file and ready to go."
+          />
         </div>
+      </section>
 
-        <div className="mt-10 grid gap-6 md:grid-cols-2">
-          <Link
-            to="/attorneys"
-            className="group rounded-2xl border border-border bg-card p-8 transition hover:border-primary hover:shadow-md"
-          >
-            <FileText className="h-8 w-8 text-primary" />
-            <h3 className="mt-5 text-xl font-semibold text-foreground">How referrals work</h3>
-            <p className="mt-2 text-sm text-muted-foreground">
-              What we document, how imaging and specialist referrals are arranged, and what your
-              client has to do.
+      {/* Contact */}
+      <section id="contact" className="border-t border-border bg-surface">
+        <div className="mx-auto max-w-3xl px-4 py-20 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h2 className="text-3xl font-semibold text-foreground">Refer a client</h2>
+            <p className="mx-auto mt-3 max-w-xl text-muted-foreground">
+              Call or email with the attorney's name, firm, and best contact number. We'll follow up
+              the same business day and send your client a secure intake link.
             </p>
-            <span className="mt-5 inline-flex items-center gap-1 text-sm font-medium text-primary">
-              Read the process{" "}
-              <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" />
-            </span>
-          </Link>
-          <Link
-            to="/attorneys"
-            hash="contact"
-            className="group rounded-2xl border border-border bg-card p-8 transition hover:border-primary hover:shadow-md"
-          >
-            <UserPlus className="h-8 w-8 text-accent" />
-            <h3 className="mt-5 text-xl font-semibold text-foreground">Refer a client</h3>
-            <p className="mt-2 text-sm text-muted-foreground">
-              Send the attorney contact details and we will follow up the same business day to open
-              intake.
-            </p>
-            <span className="mt-5 inline-flex items-center gap-1 text-sm font-medium text-primary">
-              Send us a case{" "}
-              <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" />
-            </span>
-          </Link>
-        </div>
-
-        {/* Direct contact strip */}
-        <div className="mt-8 flex flex-col items-start justify-between gap-5 rounded-2xl bg-surface px-8 py-6 md:flex-row md:items-center">
-          <div className="flex items-start gap-4">
-            <Phone className="mt-1 h-6 w-6 shrink-0 text-primary" />
-            <div>
-              <div className="text-sm font-semibold uppercase tracking-wide text-primary">
-                Prefer to just call
-              </div>
-              <div className="mt-1 text-base text-surface-foreground">
-                We can take the details over the phone and start the same day.
-              </div>
-            </div>
           </div>
-          <div className="flex flex-wrap gap-3">
+
+          <div className="mt-8 grid gap-4 sm:grid-cols-2">
             <a
               href="tel:+13179534628"
-              className="inline-flex h-11 items-center gap-2 rounded-md bg-primary px-5 text-sm font-semibold text-primary-foreground hover:brightness-110"
+              className="flex items-center gap-4 rounded-2xl border border-border bg-card p-6 hover:border-primary"
             >
-              <Phone className="h-4 w-4" /> (317) 953-4628
+              <Phone className="h-6 w-6 shrink-0 text-primary" />
+              <span>
+                <span className="block font-semibold text-foreground">(317) 953-4628</span>
+                <span className="block text-sm text-muted-foreground">Call or text</span>
+              </span>
             </a>
             <a
-              href="mailto:info@rapidlinkmed.com?subject=Attorney%20referral%20inquiry"
-              className="inline-flex h-11 items-center gap-2 rounded-md border border-border bg-background px-5 text-sm font-semibold text-foreground hover:bg-muted"
+              href="mailto:info@rapidlinkmed.com?subject=Attorney%20referral"
+              className="flex items-center gap-4 rounded-2xl border border-border bg-card p-6 hover:border-primary"
             >
-              <Mail className="h-4 w-4" /> Email us
+              <Mail className="h-6 w-6 shrink-0 text-primary" />
+              <span className="min-w-0">
+                <span className="block truncate font-semibold text-foreground">
+                  info@rapidlinkmed.com
+                </span>
+                <span className="block text-sm text-muted-foreground">Email the practice</span>
+              </span>
             </a>
           </div>
-        </div>
-      </section>
 
-      {/* Practice band */}
-      <section className="bg-surface">
-        <div className="mx-auto grid max-w-6xl gap-10 px-4 py-20 sm:px-6 md:grid-cols-2 md:items-center lg:px-8">
-          <div className="grid gap-4 sm:grid-cols-3 md:grid-cols-1 lg:grid-cols-3">
-            {[
-              { v: "2", l: "business days to a signed report" },
-              { v: "1", l: "physician from intake through sign-off" },
-              { v: "$0", l: "up front for your client on an LOP" },
-            ].map((s) => (
-              <div key={s.v} className="rounded-2xl border border-border bg-card p-6">
-                <div className="font-serif text-4xl text-primary">{s.v}</div>
-                <div className="mt-2 text-sm text-muted-foreground">{s.l}</div>
-              </div>
-            ))}
-          </div>
-          <div>
-            <p className="text-xs font-medium uppercase tracking-[0.18em] text-primary">
-              The practice
-            </p>
-            <h2 className="mt-4 font-serif text-3xl leading-tight text-foreground sm:text-4xl">
-              The record your case depends on should not take six weeks to arrive.
-            </h2>
-            <p className="mt-5 text-muted-foreground">
-              RapidLink Medical Group is an Indiana telemedicine practice built for personal injury
-              work. One board-certified physician runs the intake, orders the imaging, and signs the
-              report, so nothing sits in a queue waiting on a hand-off between providers.
-            </p>
-            <Link
-              to="/attorneys"
-              className="mt-6 inline-flex items-center gap-1 text-sm font-semibold text-primary hover:underline"
-            >
-              See how referrals work <ArrowRight className="h-4 w-4" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* How it works */}
-      <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
-            How it works
-          </h2>
-          <p className="mt-3 text-muted-foreground">
-            Three steps, and only the first one is yours.
+          <p className="mt-6 rounded-lg border border-border bg-card p-4 text-xs text-muted-foreground">
+            <strong className="text-foreground">
+              Please do not send protected health information by email.
+            </strong>{" "}
+            Email is not a secure channel. Send only the attorney contact details and we will route
+            your client into our HIPAA-compliant eClinicalWorks system, where all clinical intake,
+            records, and reporting take place.
           </p>
         </div>
-        <ol className="mt-12 grid gap-6 md:grid-cols-3">
-          {[
-            {
-              n: "Step One",
-              t: "You send us the client",
-              d: "Call or email with the client's name and a good phone number. No medical details needed to start.",
-              Icon: UserPlus,
-            },
-            {
-              n: "Step Two",
-              t: "We handle the visit",
-              d: "Your client gets one secure link and completes intake, consents, and the video visit from their phone.",
-              Icon: Video,
-            },
-            {
-              n: "Step Three",
-              t: "You get the report",
-              d: "A signed physician report reaches your office within two business days, with imaging already scheduled.",
-              Icon: FileText,
-            },
-          ].map(({ n, t, d, Icon }) => (
-            <li key={n} className="rounded-2xl border border-border bg-card p-8">
-              <div className="flex items-center justify-between">
-                <Icon className="h-6 w-6 text-primary" />
-                <span className="font-serif text-2xl text-muted-foreground">{n}</span>
-              </div>
-              <h3 className="mt-5 text-lg font-semibold text-foreground">{t}</h3>
-              <p className="mt-2 text-sm text-muted-foreground">{d}</p>
-            </li>
-          ))}
-        </ol>
       </section>
+    </div>
+  );
+}
+
+function Value({
+  Icon,
+  title,
+  body,
+}: {
+  Icon: React.ComponentType<{ className?: string }>;
+  title: string;
+  body: string;
+}) {
+  return (
+    <div className="rounded-2xl border border-border bg-card p-6">
+      <Icon className="h-6 w-6 text-primary" />
+      <div className="mt-4 font-semibold text-foreground">{title}</div>
+      <p className="mt-2 text-sm text-muted-foreground">{body}</p>
+    </div>
+  );
+}
+
+function InfoCard({
+  Icon,
+  title,
+  body,
+}: {
+  Icon: React.ComponentType<{ className?: string }>;
+  title: string;
+  body: string;
+}) {
+  return (
+    <div className="rounded-2xl bg-surface p-6">
+      <Icon className="h-6 w-6 text-primary" />
+      <div className="mt-4 font-semibold text-foreground">{title}</div>
+      <p className="mt-2 text-sm text-muted-foreground">{body}</p>
     </div>
   );
 }

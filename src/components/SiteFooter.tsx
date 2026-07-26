@@ -29,11 +29,8 @@ export function SiteFooter() {
             <a href="tel:+13178003730" className="text-foreground hover:text-primary">
               (317) 800-3730
             </a>
-            <a
-              href="mailto:rapidlinkmed@protonmail.com"
-              className="text-foreground hover:text-primary"
-            >
-              rapidlinkmed@protonmail.com
+            <a href="mailto:info@rapidlinkmed.com" className="text-foreground hover:text-primary">
+              info@rapidlinkmed.com
             </a>
           </div>
         </div>

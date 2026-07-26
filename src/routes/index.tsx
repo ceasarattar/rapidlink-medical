@@ -40,8 +40,8 @@ function Home() {
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-primary-foreground/85">
             A board-certified internal medicine physician performs the intake, coordinates imaging
-            and specialists, and delivers a clean, defensible report, all within two business
-            days and entirely by telemedicine.
+            and specialists, and delivers a clean, defensible report, all within two business days
+            and entirely by telemedicine.
           </p>
           <div className="mt-9 flex flex-wrap items-center gap-3">
             <Link
@@ -155,7 +155,7 @@ function Home() {
               <Phone className="h-4 w-4" /> (317) 800-3730
             </a>
             <a
-              href="mailto:rapidlinkmed@protonmail.com?subject=Attorney%20referral%20inquiry"
+              href="mailto:info@rapidlinkmed.com?subject=Attorney%20referral%20inquiry"
               className="inline-flex h-11 items-center gap-2 rounded-md border border-border bg-background px-5 text-sm font-semibold text-foreground hover:bg-muted"
             >
               <Mail className="h-4 w-4" /> Email us

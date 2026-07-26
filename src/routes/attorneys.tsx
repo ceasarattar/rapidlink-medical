@@ -211,13 +211,13 @@ function Attorneys() {
               </span>
             </a>
             <a
-              href="mailto:rapidlinkmed@protonmail.com?subject=Attorney%20referral"
+              href="mailto:info@rapidlinkmed.com?subject=Attorney%20referral"
               className="flex items-center gap-4 rounded-2xl border border-border bg-card p-6 hover:border-primary"
             >
               <Mail className="h-6 w-6 shrink-0 text-primary" />
               <span className="min-w-0">
                 <span className="block truncate font-semibold text-foreground">
-                  rapidlinkmed@protonmail.com
+                  info@rapidlinkmed.com
                 </span>
                 <span className="block text-sm text-muted-foreground">Email the practice</span>
               </span>
@@ -225,8 +225,9 @@ function Attorneys() {
           </div>
 
           <p className="mt-6 rounded-lg border border-border bg-card p-4 text-xs text-muted-foreground">
-            <strong className="text-foreground">Please do not send protected health information
-            by email.</strong>{" "}
+            <strong className="text-foreground">
+              Please do not send protected health information by email.
+            </strong>{" "}
             Email is not a secure channel. Send only the attorney contact details and we will route
             your client into our HIPAA-compliant eClinicalWorks system, where all clinical intake,
             records, and reporting take place.

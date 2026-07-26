@@ -17,7 +17,7 @@ import {
 export const Route = createFileRoute("/attorneys")({
   head: () => ({
     meta: [
-      { title: "Attorney-Ready Medical Intake in 24-48 Hours | RapidLink Medical" },
+      { title: "How Referrals Work | RapidLink Medical" },
       {
         name: "description",
         content:
@@ -38,12 +38,12 @@ function Attorneys() {
             For Personal Injury Attorneys
           </p>
           <h1 className="mt-5 max-w-3xl text-4xl font-semibold tracking-tight sm:text-5xl">
-            Physician-grade medical intake for your PI clients, fully turned around in 24-48 hours.
+            What happens after you send us a client.
           </h1>
           <p className="mt-6 max-w-2xl text-base text-primary-foreground/85">
-            A board-certified internal medicine physician handles intake, coordinates imaging and
-            specialists, and delivers a clean, defensible report. All within two business days, all
-            by telemedicine, all in Indiana.
+            A board-certified internal medicine physician handles the intake personally and signs
+            the report. Imaging and specialist referrals are set up while the case is still fresh.
+            Everything happens by telemedicine, anywhere in Indiana.
           </p>
           <div className="mt-9 flex flex-wrap gap-3">
             <a
@@ -66,15 +66,15 @@ function Attorneys() {
       <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-xs font-medium uppercase tracking-[0.18em] text-primary">
-            What we do for your client that the mill clinics don't
+            Where we differ from the mill clinics
           </p>
           <h2 className="mt-3 text-3xl font-semibold text-foreground sm:text-4xl">
-            A complete, comprehensive medical intake, in 24-48 hours.
+            Everything the case needs from the first visit.
           </h2>
           <p className="mt-4 text-muted-foreground">
-            Mill clinics drag out treatment, hand your client off between providers, and hand you
-            back patchy records weeks later. We do the opposite: one board-certified physician, one
-            complete intake, one clean record, delivered fast.
+            Mill clinics stretch treatment out over months and hand you incomplete records well
+            after you needed them. We run it differently. One physician handles the whole intake,
+            and the records are on your desk in two business days.
           </p>
         </div>
 
@@ -82,12 +82,12 @@ function Attorneys() {
           <Value
             Icon={Clock}
             title="24-48 hour turnaround"
-            body="Initial evaluation, report, imaging coordination, and referrals, all completed within two business days."
+            body="Evaluation, signed report, imaging orders, and referrals are all finished inside two business days."
           />
           <Value
             Icon={Stethoscope}
             title="Done by an MD, not a tech"
-            body="Intake is conducted by a board-certified internal medicine physician. Stronger documentation, stronger case."
+            body="A board-certified internal medicine physician runs the intake personally, so the documentation holds up if the other side challenges it."
           />
           <Value
             Icon={Network}
@@ -107,7 +107,7 @@ function Attorneys() {
           <Value
             Icon={Smartphone}
             title="One click for your client"
-            body="We send a single secure link. Intake, consents, and visit, all done from their phone."
+            body="One secure link covers intake, consents, and the visit itself. Your client does it from their phone."
           />
           <Value
             Icon={Scale}
@@ -116,8 +116,8 @@ function Attorneys() {
           />
           <Value
             Icon={ShieldCheck}
-            title="HIPAA-compliant, end-to-end"
-            body="Intake, visit, records, and reports all run through our HIPAA-compliant eClinicalWorks system, never through this website."
+            title="Records stay in the EHR"
+            body="The visit, the chart, and the report all live in our HIPAA-compliant eClinicalWorks system. Nothing clinical touches this website."
           />
         </div>
       </section>
@@ -127,11 +127,11 @@ function Attorneys() {
         <div className="mx-auto max-w-5xl px-4 py-20 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-semibold text-foreground sm:text-4xl">
-              For your client: one link, that's it.
+              What your client has to do
             </h2>
             <p className="mt-4 text-muted-foreground">
-              We make this effortless for the client. No driving across town, no waiting rooms, no
-              paperwork shuffle. Spanish-speaking clients get the same experience in Spanish.
+              Your client never has to drive anywhere or sit in a waiting room. Everything happens
+              on their phone, in English or Spanish.
             </p>
           </div>
           <ol className="mt-12 grid gap-6 md:grid-cols-4">

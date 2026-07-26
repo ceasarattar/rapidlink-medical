@@ -16,19 +16,25 @@ export function SiteFooter() {
             </p>
           </div>
 
-          <div className="grid gap-x-12 gap-y-2 text-sm sm:grid-cols-2">
+          <div className="flex flex-col gap-6 text-sm">
             <Link to="/" className="text-primary-foreground/85 hover:text-accent">
               Home
             </Link>
-            <a href="tel:+13179534628" className="text-primary-foreground/85 hover:text-accent">
-              (317) 953-4628
-            </a>
-            <a
-              href="mailto:info@rapidlinkmed.com"
-              className="text-primary-foreground/85 hover:text-accent"
-            >
-              info@rapidlinkmed.com
-            </a>
+
+            <div className="flex flex-col gap-2">
+              <h2 className="text-xs font-medium uppercase tracking-[0.2em] text-accent">
+                Contact us
+              </h2>
+              <a href="tel:+13179534628" className="text-primary-foreground/85 hover:text-accent">
+                (317) 953-4628
+              </a>
+              <a
+                href="mailto:info@rapidlinkmed.com"
+                className="text-primary-foreground/85 hover:text-accent"
+              >
+                info@rapidlinkmed.com
+              </a>
+            </div>
           </div>
         </div>
 

@@ -42,7 +42,9 @@
   --card-foreground: oklch(0.24 0 0);
 
   /* deep teal #0F4C5C, matches the logo mark */
-  --primary: oklch(0.39 0.05 215);
+  /* Exact teal of the logo artwork (#0e4c5c), so the logo image sits on the
+     header and footer with no visible edge. */
+  --primary: oklch(0.386 0.0645 219.8);
   --primary-foreground: oklch(0.98 0.005 85);
 
   --muted: oklch(0.94 0.008 85);

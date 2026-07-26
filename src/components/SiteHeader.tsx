@@ -23,11 +23,11 @@ export function SiteHeader() {
             For Attorneys
           </Link>
           <a
-            href="tel:+13178003730"
+            href="tel:+13179534628"
             className="inline-flex h-10 items-center gap-2 rounded-md bg-accent px-4 text-sm font-semibold text-accent-foreground hover:brightness-95"
           >
             <Phone className="h-3.5 w-3.5" />
-            <span className="hidden sm:inline">(317) 800-3730</span>
+            <span className="hidden sm:inline">(317) 953-4628</span>
             <span className="sm:hidden">Call</span>
           </a>
         </nav>

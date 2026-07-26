@@ -67,9 +67,11 @@
   * {
     border-color: var(--color-border);
   }
-  html {
-    scroll-behavior: smooth;
-  }
+  /* No `scroll-behavior: smooth` on html. Verified: with it set, a page opened
+     at a #hash never reaches the target. The browser turns the fragment jump
+     into an animation that gets cancelled during hydration, leaving the
+     visitor at the top. /attorneys#contact was landing at 0 instead of 2401.
+     An instant jump is the correct behavior for a fragment link anyway. */
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);

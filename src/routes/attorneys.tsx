@@ -47,10 +47,10 @@ function Attorneys() {
           </p>
           <div className="mt-9 flex flex-wrap gap-3">
             <a
-              href="tel:+13178003730"
+              href="tel:+13179534628"
               className="inline-flex h-12 items-center gap-2 rounded-md bg-accent px-6 text-base font-semibold text-accent-foreground hover:brightness-95"
             >
-              <Phone className="h-4 w-4" /> (317) 800-3730
+              <Phone className="h-4 w-4" /> (317) 953-4628
             </a>
             <a
               href="#contact"
@@ -201,12 +201,12 @@ function Attorneys() {
 
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
             <a
-              href="tel:+13178003730"
+              href="tel:+13179534628"
               className="flex items-center gap-4 rounded-2xl border border-border bg-card p-6 hover:border-primary"
             >
               <Phone className="h-6 w-6 shrink-0 text-primary" />
               <span>
-                <span className="block font-semibold text-foreground">(317) 800-3730</span>
+                <span className="block font-semibold text-foreground">(317) 953-4628</span>
                 <span className="block text-sm text-muted-foreground">Call or text</span>
               </span>
             </a>

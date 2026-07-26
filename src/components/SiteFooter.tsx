@@ -23,8 +23,8 @@ export function SiteFooter() {
             <Link to="/attorneys" className="text-primary-foreground/85 hover:text-accent">
               For Attorneys
             </Link>
-            <a href="tel:+13178003730" className="text-primary-foreground/85 hover:text-accent">
-              (317) 800-3730
+            <a href="tel:+13179534628" className="text-primary-foreground/85 hover:text-accent">
+              (317) 953-4628
             </a>
             <a
               href="mailto:info@rapidlinkmed.com"

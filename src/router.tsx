@@ -9,7 +9,7 @@ export const getRouter = () =>
     // sits there doing nothing while it downloads, which reads as broken.
     defaultPreload: "intent",
     defaultPreloadStaleTime: 60_000,
-    // Multi-page site: every navigation should land at the top of the new
-    // page rather than keeping the previous page's scroll offset.
-    scrollRestoration: true,
+    // Left off. Navigating between the two pages already lands at the top of
+    // the new page without it, so it has nothing to add here.
+    scrollRestoration: false,
   });

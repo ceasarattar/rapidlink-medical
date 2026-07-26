@@ -1,41 +1,41 @@
 import { Link } from "@tanstack/react-router";
-import rapidlinkMark from "../assets/rapidlink-mark.png";
+import { Wordmark } from "./Wordmark";
 
 export function SiteFooter() {
   return (
-    <footer className="mt-24 border-t border-border bg-surface">
-      <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
+    // No top margin: the preceding section runs straight into the footer, so
+    // the page reads as two solid teal bands top and bottom rather than
+    // leaving a stray strip of page background above the footer.
+    <footer className="bg-primary text-primary-foreground">
+      <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
           <div>
-            <img
-              src={rapidlinkMark}
-              alt="RapidLink Care Connect"
-              width={72}
-              height={72}
-              className="h-18 w-18 rounded-full"
-            />
-            <p className="mt-4 max-w-sm text-sm text-muted-foreground">
+            <Wordmark />
+            <p className="mt-5 max-w-sm text-sm text-primary-foreground/70">
               RapidLink Medical Group PC · Indiana telemedicine only.
             </p>
           </div>
 
           <div className="grid gap-x-12 gap-y-2 text-sm sm:grid-cols-2">
-            <Link to="/" className="text-foreground hover:text-primary">
+            <Link to="/" className="text-primary-foreground/85 hover:text-accent">
               Home
             </Link>
-            <Link to="/attorneys" className="text-foreground hover:text-primary">
+            <Link to="/attorneys" className="text-primary-foreground/85 hover:text-accent">
               For Attorneys
             </Link>
-            <a href="tel:+13178003730" className="text-foreground hover:text-primary">
+            <a href="tel:+13178003730" className="text-primary-foreground/85 hover:text-accent">
               (317) 800-3730
             </a>
-            <a href="mailto:info@rapidlinkmed.com" className="text-foreground hover:text-primary">
+            <a
+              href="mailto:info@rapidlinkmed.com"
+              className="text-primary-foreground/85 hover:text-accent"
+            >
               info@rapidlinkmed.com
             </a>
           </div>
         </div>
 
-        <div className="mt-10 space-y-2 border-t border-border pt-6 text-xs text-muted-foreground">
+        <div className="mt-12 space-y-2 border-t border-primary-foreground/15 pt-6 text-xs text-primary-foreground/70">
           <p>
             This website is informational only. It does not collect, transmit, or store protected
             health information, and nothing submitted through it creates a physician-patient

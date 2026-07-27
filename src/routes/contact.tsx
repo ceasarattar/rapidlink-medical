@@ -303,7 +303,7 @@ function Contact() {
                   info@rapidlinkmed.com
                 </span>
                 <span className="block text-sm text-muted-foreground">
-                  We reply the same business day
+                  We reply within one business day
                 </span>
               </span>
             </a>

@@ -7,7 +7,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Physician-led medical intake for Indiana personal injury attorneys. Board-certified internal medicine physicians see your client by telemedicine and send a signed report in two business days. Letters of Protection accepted.",
+          "Physician-led medical intake for Indiana personal injury attorneys. Board-certified internal medicine physicians see your client by telemedicine and send a signed report in 24 to 48 hours. Letters of Protection accepted.",
       },
     ],
   }),
@@ -41,7 +41,7 @@ function Home() {
             For personal injury attorneys in Indiana
           </p>
           <h1 className="mt-7 max-w-[18ch] text-4xl font-bold leading-[0.98] tracking-[-0.035em] sm:text-5xl lg:text-[5rem]">
-            2 business days from referral to <span className="text-accent">signed report.</span>
+            24 to 48 hours from referral to <span className="text-accent">signed report.</span>
           </h1>
           <p className="mt-7 max-w-[44ch] text-lg text-primary-foreground/65">
             Our team consists of board-certified internal medicine physicians who handle the intake
@@ -65,6 +65,29 @@ function Home() {
         </div>
       </section>
 
+      {/* Credential strip, directly under the claim it backs. On white rather
+          than in the teal band because the badge artwork carries its own
+          opaque pale blue background, which would read as a bright box on
+          teal. */}
+      <section className="border-b border-border">
+        <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-5 px-4 py-6 sm:px-6 lg:px-8">
+          <img
+            src="/IM Badge.png"
+            alt="American Board of Internal Medicine, board certified"
+            width={63}
+            height={56}
+            className="h-14 w-auto shrink-0 rounded-md"
+          />
+          <p className="text-sm text-muted-foreground">
+            Our physicians are certified by the{" "}
+            <span className="font-semibold text-foreground">
+              American Board of Internal Medicine
+            </span>
+            .
+          </p>
+        </div>
+      </section>
+
       {/* White from here down */}
       <section className="border-b border-border">
         <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
@@ -77,7 +100,7 @@ function Home() {
           <p className="mt-4 max-w-[58ch] text-muted-foreground">
             The same physician handles a case from intake through sign-off, so nothing waits on a
             handoff. The evaluation, the imaging orders, and the specialist referrals all finish
-            inside the same two day window.
+            inside the same 24 to 48 hour window.
           </p>
 
           {/* Hairline grid: 1px gaps over a border-coloured backdrop, so the
@@ -85,11 +108,11 @@ function Home() {
           <div className="mt-12 grid gap-px border border-border bg-border sm:grid-cols-2 lg:grid-cols-4">
             <Cell
               title="24 to 48 hour turnaround"
-              body="Evaluation, signed report, imaging orders, and referrals, all inside two business days."
+              body="Evaluation, signed report, imaging orders, and referrals, all inside 24 to 48 hours."
             />
             <Cell
               title="Done by an MD, not a tech"
-              body="Board-certified physicians run the intake personally, so the documentation holds up if challenged."
+              body="Board-certified physicians run the intake personally and the report is written to medical-legal standards, so it holds up if challenged."
             />
             <Cell
               title="Coordinated referrals"
@@ -168,7 +191,7 @@ function Home() {
           </div>
 
           <div className="grid gap-px border border-border bg-border">
-            <Fact value="2" label="business days to a signed report" />
+            <Fact value="24-48" label="hours to a signed report" />
             <Fact value="1" label="physician per case, from intake through sign-off" />
             <Fact value="$0" label="up front for your client on an LOP" />
           </div>
@@ -185,7 +208,7 @@ function Home() {
             Tell us about the case.
           </h2>
           <p className="mt-4 max-w-[58ch] text-accent-foreground/80">
-            Tell us your name, your firm, and the best number to reach you. We follow up the same
+            Tell us your name, your firm, and the best number to reach you. We follow up within one
             business day.
           </p>
 
@@ -215,7 +238,7 @@ function Home() {
                 info@rapidlinkmed.com
               </span>
               <span className="mt-0.5 block text-[0.8125rem] text-accent-foreground/70">
-                We reply the same business day
+                We reply within one business day
               </span>
             </a>
           </div>

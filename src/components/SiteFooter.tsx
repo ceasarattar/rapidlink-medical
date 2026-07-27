@@ -50,7 +50,7 @@ export function SiteFooter() {
             HIPAA-compliant eClinicalWorks system.
           </p>
           <p>
-            Medical services are provided by Indiana-licensed physicians to patients physically
+            Medical services are provided by physicians licensed in Indiana to patients physically
             located in the State of Indiana. Content on this site does not constitute medical or
             legal advice.
           </p>

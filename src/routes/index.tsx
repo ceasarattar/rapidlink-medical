@@ -217,19 +217,18 @@ function Home() {
           <div className="text-center">
             <h2 className="text-3xl font-semibold text-foreground">Get in touch</h2>
             <p className="mx-auto mt-3 max-w-xl text-muted-foreground">
-              Send us the attorney's name, firm, and best contact number. We'll follow up the same
-              business day and send your client a secure intake link.
+              Tell us your name, your firm, and the best number to reach you. We follow up the same
+              business day.
             </p>
             <Link
               to="/contact"
               className="mt-7 inline-flex h-12 items-center justify-center gap-2 rounded-md bg-accent px-6 text-base font-semibold text-accent-foreground shadow-sm hover:brightness-95"
             >
-              Open the contact form <ArrowRight className="h-4 w-4" />
+              Send us the details <ArrowRight className="h-4 w-4" />
             </Link>
-            <p className="mt-4 text-sm text-muted-foreground">Or reach us directly:</p>
           </div>
 
-          <div className="mt-6 grid gap-4 sm:grid-cols-2">
+          <div className="mt-10 grid gap-4 sm:grid-cols-2">
             <a
               href="tel:+13179534628"
               className="flex items-center gap-4 rounded-2xl border border-border bg-card p-6 hover:border-primary"
@@ -237,7 +236,9 @@ function Home() {
               <Phone className="h-6 w-6 shrink-0 text-primary" />
               <span>
                 <span className="block font-semibold text-foreground">(317) 953-4628</span>
-                <span className="block text-sm text-muted-foreground">Call or text</span>
+                <span className="block text-sm text-muted-foreground">
+                  Call or text, fastest during business hours
+                </span>
               </span>
             </a>
             <a
@@ -249,7 +250,9 @@ function Home() {
                 <span className="block truncate font-semibold text-foreground">
                   info@rapidlinkmed.com
                 </span>
-                <span className="block text-sm text-muted-foreground">Email the practice</span>
+                <span className="block text-sm text-muted-foreground">
+                  We reply the same business day
+                </span>
               </span>
             </a>
           </div>
@@ -258,8 +261,8 @@ function Home() {
             <strong className="text-foreground">
               Please do not send protected health information by email.
             </strong>{" "}
-            Email is not a secure channel. Send only the attorney contact details and we will route
-            your client into our HIPAA-compliant eClinicalWorks system, where all clinical intake,
+            Email is not a secure channel. Send only your contact details and we will route your
+            client into our HIPAA-compliant eClinicalWorks system, where all clinical intake,
             records, and reporting take place.
           </p>
         </div>

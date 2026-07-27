@@ -267,7 +267,7 @@ function Contact() {
       </form>
 
       <div className="mt-14 border-t border-border pt-8">
-        <p className="text-sm text-muted-foreground">Or reach us directly:</p>
+        <p className="text-sm text-muted-foreground">Prefer to skip the form?</p>
         <div className="mt-4 grid gap-4 sm:grid-cols-2">
           <a
             href="tel:+13179534628"
@@ -276,7 +276,9 @@ function Contact() {
             <Phone className="h-5 w-5 shrink-0 text-primary" />
             <span>
               <span className="block font-semibold text-foreground">(317) 953-4628</span>
-              <span className="block text-sm text-muted-foreground">Call or text</span>
+              <span className="block text-sm text-muted-foreground">
+                Call or text, fastest during business hours
+              </span>
             </span>
           </a>
           <a
@@ -288,7 +290,9 @@ function Contact() {
               <span className="block truncate font-semibold text-foreground">
                 info@rapidlinkmed.com
               </span>
-              <span className="block text-sm text-muted-foreground">Email the practice</span>
+              <span className="block text-sm text-muted-foreground">
+                We reply the same business day
+              </span>
             </span>
           </a>
         </div>

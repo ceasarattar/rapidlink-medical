@@ -54,6 +54,11 @@ export function SiteFooter() {
             located in the State of Indiana. Content on this site does not constitute medical or
             legal advice.
           </p>
+          <p>
+            RapidLink Medical Group PC provides independent medical evaluation and treatment.
+            Medical findings are objective and independent. No outcome of any legal matter is
+            promised or implied.
+          </p>
           <p>© {new Date().getFullYear()} RapidLink Medical Group PC. All rights reserved.</p>
         </div>
       </div>

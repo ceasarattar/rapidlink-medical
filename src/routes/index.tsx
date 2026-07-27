@@ -3,11 +3,11 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "RapidLink Medical | Medical Intake for Indiana PI Attorneys" },
+      { title: "RapidLink Medical | Medical-Legal Reports for Indiana PI Attorneys" },
       {
         name: "description",
         content:
-          "Physician-led medical intake for Indiana personal injury attorneys. Board-certified internal medicine physicians see your client by telemedicine and send a signed report in 24 to 48 hours. Letters of Protection accepted.",
+          "Physician-performed personal injury evaluations by telehealth, statewide across Indiana. ICD-10-coded diagnoses, imaging justified by validated decision rules, and a causation opinion to a reasonable degree of medical probability, delivered in 24 to 48 hours.",
       },
     ],
   }),
@@ -40,13 +40,13 @@ function Home() {
           <p className="text-[0.6875rem] font-bold uppercase tracking-[0.28em] text-accent">
             For personal injury attorneys in Indiana
           </p>
-          <h1 className="mt-7 max-w-[18ch] text-4xl font-bold leading-[0.98] tracking-[-0.035em] sm:text-5xl lg:text-[5rem]">
-            24 to 48 hours from referral to <span className="text-accent">signed report.</span>
+          <h1 className="mt-7 max-w-[20ch] text-4xl font-bold leading-[0.98] tracking-[-0.035em] sm:text-5xl lg:text-7xl">
+            The medical-legal report your case deserves.{" "}
+            <span className="text-accent">In 24 to 48 hours.</span>
           </h1>
-          <p className="mt-7 max-w-[44ch] text-lg text-primary-foreground/65">
-            Our team consists of board-certified internal medicine physicians who handle the intake
-            personally. Imaging and specialist referrals are set up while the case is still fresh,
-            entirely by telemedicine.
+          <p className="mt-7 max-w-[48ch] text-lg text-primary-foreground/65">
+            Physician-performed personal injury evaluations by telehealth, statewide across Indiana,
+            delivering documentation built for litigation from the very first visit.
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-3.5">
             <Link
@@ -56,10 +56,10 @@ function Home() {
               Get in touch
             </Link>
             <a
-              href="#handoff"
+              href="#report"
               className="inline-flex h-13 items-center rounded-full border-[1.5px] border-cream/30 px-7 text-base font-bold hover:border-accent hover:text-accent"
             >
-              See how it works
+              See what is in the report
             </a>
           </div>
         </div>
@@ -88,56 +88,115 @@ function Home() {
         </div>
       </section>
 
-      {/* White from here down */}
+      {/* The problem this practice exists to solve */}
       <section className="border-b border-border">
         <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
           <p className="text-[0.6875rem] font-bold uppercase tracking-[0.28em] text-primary">
-            How we work
+            Why the record decides the case
+          </p>
+          <h2 className="mt-3.5 max-w-[24ch] text-3xl font-bold leading-tight tracking-[-0.03em] text-foreground sm:text-4xl">
+            Most medical records were never written with your case in mind.
+          </h2>
+          <div className="mt-6 grid gap-6 lg:grid-cols-2 lg:gap-12">
+            <p className="text-muted-foreground">
+              Most personal injury cases are won or lost on the medical record. A rushed urgent-care
+              note that never mentions mechanism. A chart that is silent on causation. Imaging that
+              was never ordered, or ordered without documented medical necessity. By the time you
+              see the gap, it is baked into the record.
+            </p>
+            <p className="text-muted-foreground">
+              RapidLink Medical Group was built to close that gap. Every client is evaluated by one
+              of our board-certified internal medicine physicians, and every evaluation produces a
+              comprehensive medical-legal report designed to withstand scrutiny, from the adjuster's
+              first review to a defense medical examiner's cross-examination.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* What is in the report. Nine items, so three columns divide evenly and
+          the last row is never left ragged. */}
+      <section id="report" className="border-b border-border">
+        <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+          <p className="text-[0.6875rem] font-bold uppercase tracking-[0.28em] text-primary">
+            What is inside every report
           </p>
           <h2 className="mt-3.5 max-w-[22ch] text-3xl font-bold leading-tight tracking-[-0.03em] text-foreground sm:text-4xl">
-            Everything the case needs from the first visit.
+            Documentation built for litigation.
           </h2>
-          <p className="mt-4 max-w-[58ch] text-muted-foreground">
-            The same physician handles a case from intake through sign-off, so nothing waits on a
-            handoff. The evaluation, the imaging orders, and the specialist referrals all finish
-            inside the same 24 to 48 hour window.
-          </p>
 
-          {/* Hairline grid: 1px gaps over a border-coloured backdrop, so the
-              cells are divided by rules rather than by cards floating apart. */}
-          <div className="mt-12 grid gap-px border border-border bg-border sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-12 grid gap-px border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
             <Cell
-              title="24 to 48 hour turnaround"
-              body="Evaluation, signed report, imaging orders, and referrals, all inside 24 to 48 hours."
+              title="Injury-by-injury ICD-10 diagnoses"
+              body="Every painful region documented as its own problem, with laterality-specific codes and a full differential diagnosis list, including the fractures and internal injuries being ruled out."
             />
             <Cell
-              title="Done by an MD, not a tech"
-              body="Board-certified physicians run the intake personally and the report is written to medical-legal standards, so it holds up if challenged."
+              title="Imaging with documented medical necessity"
+              body="Orders are supported by validated clinical decision rules applied and cited in the note itself: Canadian C-Spine Rule, Canadian CT Head Rule, Ottawa Knee and Ankle Rules, plus an orthopedic protocol including weight-bearing X-ray series and MRI where indicated. When the defense asks why the MRI was ordered, the answer is already in the record."
             />
             <Cell
-              title="Coordinated referrals"
-              body="Direct routing to pre-vetted physical therapy, pain management, and orthopedics partners."
+              title="Causation to a reasonable degree of medical probability"
+              body="Tying mechanism, temporal onset, and pre-accident baseline together in the language your case requires."
             />
             <Cell
-              title="MRI and CT arranged"
-              body="Coordination with imaging partners including Reyes MRI and Affordable MRI."
+              title="A documented pre-accident baseline"
+              body="Honest disclosures, including pre-existing conditions when they exist, paired with a physician's aggravation analysis. Credible records make credible cases."
             />
             <Cell
-              title="All languages welcome"
-              body="We can add a professional interpreter to any visit, so a language barrier never delays the intake."
+              title="Pertinent negatives the client personally attested"
+              body="Our intake allows no pre-filled answers and no skipped screens. Every negative finding in the report reflects a box the client actively selected, not a template artifact a defense expert can attack."
             />
             <Cell
-              title="One click for your client"
-              body="One secure link covers intake, consents, and the visit. Done from their phone."
+              title="Objective psychological injury documentation"
+              body="Validated screening instruments, PHQ-9, GAD-7, and PC-PTSD-5, scored in the record, so emotional distress damages rest on recognized measures rather than adjectives."
             />
             <Cell
-              title="Letter of Protection accepted"
-              body="No upfront cost to your client. We work on LOP for qualifying cases."
+              title="Functional and economic impact"
+              body="Work missed, duties modified, activities of daily living, out-of-pocket costs, and household services including before and after caregiving capacity. The foundations of the damages story."
             />
             <Cell
-              title="Records stay in the EHR"
-              body="Chart and report live in our HIPAA-compliant eClinicalWorks system, never on this website."
+              title="Premises and incident facts preserved early"
+              body="For falls and other non-auto cases: hazard description, warning sign status, witnesses, and whether the incident was reported, captured in the client's own words while memory is fresh."
             />
+            <Cell
+              title="The client's verbatim intake, preserved"
+              body="Alongside the physician's report, we maintain a verbatim record of the client's own answers. Two documents that corroborate each other."
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Turnaround and rigor, side by side, because the pairing is the point:
+          neither claim is worth much without the other. */}
+      <section className="border-b border-border">
+        <div className="mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:px-6 sm:py-20 lg:grid-cols-2 lg:gap-16 lg:px-8">
+          <div>
+            <p className="text-[0.6875rem] font-bold uppercase tracking-[0.28em] text-primary">
+              Turnaround
+            </p>
+            <h2 className="mt-3.5 text-3xl font-bold leading-tight tracking-[-0.03em] text-foreground sm:text-4xl">
+              Your demand package should not wait weeks for records.
+            </h2>
+            <p className="mt-4 text-muted-foreground">
+              Report delivered in 24 to 48 hours from the completed evaluation. Referral to
+              evaluation is fast: telehealth means no transportation barriers and no clinic queues,
+              and clients can complete intake from their phone.
+            </p>
+          </div>
+          <div>
+            <p className="text-[0.6875rem] font-bold uppercase tracking-[0.28em] text-primary">
+              Built for scrutiny, not just for speed
+            </p>
+            <h2 className="mt-3.5 text-3xl font-bold leading-tight tracking-[-0.03em] text-foreground sm:text-4xl">
+              Speed means nothing if the document does not hold up.
+            </h2>
+            <p className="mt-4 text-muted-foreground">
+              Every evaluation includes structured emergency red flag screening with documented
+              safety dispositions, because a record that shows genuine clinical rigor is a record a
+              jury believes. Our findings are objective and independent: we document what is
+              medically there, which is exactly why the documentation is worth something when it
+              matters.
+            </p>
           </div>
         </div>
       </section>
@@ -178,16 +237,27 @@ function Home() {
         <div className="mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:px-6 sm:py-20 lg:grid-cols-2 lg:gap-16 lg:px-8">
           <div>
             <p className="text-[0.6875rem] font-bold uppercase tracking-[0.28em] text-primary">
-              Coverage
+              Practical details attorneys ask about
             </p>
             <h2 className="mt-3.5 max-w-[22ch] text-3xl font-bold leading-tight tracking-[-0.03em] text-foreground sm:text-4xl">
-              Indiana, by telemedicine only.
+              Statewide Indiana, by telehealth.
             </h2>
-            <p className="mt-4 max-w-[58ch] text-muted-foreground">
-              A large portion of our personal injury practice is motor vehicle accident cases: neck,
-              back, soft-tissue, post-concussive, and beyond. Imaging and specialist referrals are
-              on file and ready to go.
-            </p>
+            <ul className="mt-6 grid gap-3 text-muted-foreground">
+              <Bullet>
+                Letter of Protection accepted, with no health insurance billed on LOP cases.
+              </Bullet>
+              <Bullet>
+                Statewide Indiana coverage by telehealth, one referral process for clients anywhere
+                in the state.
+              </Bullet>
+              <Bullet>
+                Records released to your office promptly under the client's signed authorization.
+              </Bullet>
+              <Bullet>
+                Intake and consents written in English, Spanish, and Haitian Creole, electronically
+                signed and stored, with an interpreter available in any language.
+              </Bullet>
+            </ul>
           </div>
 
           <div className="grid gap-px border border-border bg-border">
@@ -204,12 +274,12 @@ function Home() {
           <p className="text-[0.6875rem] font-bold uppercase tracking-[0.28em] text-accent-foreground/60">
             Contact us
           </p>
-          <h2 className="mt-3.5 text-3xl font-bold leading-tight tracking-[-0.03em] sm:text-4xl">
-            Tell us about the case.
+          <h2 className="mt-3.5 max-w-[20ch] text-3xl font-bold leading-tight tracking-[-0.03em] sm:text-4xl">
+            Send us one referral and read the report.
           </h2>
           <p className="mt-4 max-w-[58ch] text-accent-foreground/80">
-            Tell us your name, your firm, and the best number to reach you. We follow up within one
-            business day.
+            That is the whole pitch: the document makes the argument for us. Call or email to set up
+            your firm's referral channel today.
           </p>
 
           <Link
@@ -264,6 +334,18 @@ function Cell({ title, body }: { title: string; body: string }) {
       <h3 className="mt-4 text-[0.9375rem] font-bold tracking-tight text-foreground">{title}</h3>
       <p className="mt-1.5 text-sm text-muted-foreground">{body}</p>
     </div>
+  );
+}
+
+function Bullet({ children }: { children: React.ReactNode }) {
+  return (
+    <li className="flex gap-3">
+      <span
+        aria-hidden
+        className="mt-2 block h-2 w-2 shrink-0 rounded-full border-2 border-accent"
+      />
+      <span className="text-sm">{children}</span>
+    </li>
   );
 }
 

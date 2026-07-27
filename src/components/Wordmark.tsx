@@ -1,23 +1,33 @@
 /**
- * Brand lockup, rendered from the logo artwork in public/.
+ * Brand lockup: the ring mark as a rounded teal tile, then the name in text.
  *
- * The source PNG is a 2400x576 banner whose teal background is baked in.
- * --primary is set to that exact teal (#0e4c5c) in styles.css, so the image
- * sits on the header and footer with no visible edge.
+ * The source PNG is a 2400x576 banner with the teal baked in, and its own
+ * "RapidLink Medical Group" lettering baked in to the right of the mark. Only
+ * the mark is wanted here, so the img is clipped by the square wrapper: at
+ * h-9 the banner's natural width is 150px, and a 36px-wide window over it
+ * shows the leftmost 576px of the source, which is the mark plus even teal
+ * margin on all four sides. max-w-none keeps the img from being shrunk to the
+ * wrapper by the preflight `max-width: 100%`, which would squash the artwork.
  *
- * The artwork only occupies the left ~76% of the canvas; the rest is empty
- * background. object-cover with object-left trims that dead space so the
- * lockup does not sit in a wide, mostly empty box. The fixed width is that
- * 76% crop at the given height, keeping the artwork's own proportions.
+ * The name is live text rather than the baked-in lettering so it takes the
+ * page's font and colors, and so it stays legible on the light header.
  */
 export function Wordmark({ className = "" }: { className?: string }) {
   return (
-    <img
-      src="/RapidLink_Logo_Teal_Background_Group_2400px.png"
-      alt="RapidLink Medical Group"
-      width={177}
-      height={56}
-      className={`h-14 w-[177px] object-cover object-left ${className}`}
-    />
+    <span className={`flex items-center gap-2.5 ${className}`}>
+      <span className="block h-9 w-9 shrink-0 overflow-hidden rounded-md">
+        <img
+          src="/RapidLink_Logo_Teal_Background_Group_2400px.png"
+          alt=""
+          aria-hidden
+          width={150}
+          height={36}
+          className="h-9 w-[150px] max-w-none"
+        />
+      </span>
+      <span className="text-base font-semibold tracking-tight text-foreground">
+        RapidLink <span className="font-normal text-muted-foreground">Medical</span>
+      </span>
+    </span>
   );
 }

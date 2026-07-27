@@ -13,6 +13,7 @@ import {
   Phone,
   Mail,
 } from "lucide-react";
+import heroHolistic from "../assets/hero-holistic.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -31,32 +32,48 @@ export const Route = createFileRoute("/")({
 function Home() {
   return (
     <div>
-      {/* Hero */}
-      <section className="border-b border-border bg-primary text-primary-foreground">
-        <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
-          <p className="text-xs font-medium uppercase tracking-[0.2em] text-accent">
+      {/* Hero.
+          Background is the photograph with a warm scrim over it, so the hero reads
+          as part of the light page body rather than as a teal block. The scrim is
+          opaque enough that the text sits on close to --background, which is what
+          keeps the copy legible over the busier parts of the image. */}
+      <section className="relative isolate overflow-hidden border-b border-border">
+        <img
+          src={heroHolistic}
+          alt=""
+          aria-hidden
+          width={1920}
+          height={1080}
+          className="absolute inset-0 -z-10 h-full w-full object-cover"
+        />
+        <div
+          aria-hidden
+          className="absolute inset-0 -z-10 bg-gradient-to-b from-background/85 via-background/75 to-background/95"
+        />
+        <div className="mx-auto max-w-4xl px-4 pb-20 pt-24 text-center sm:px-6 sm:pt-32 lg:px-8">
+          <p className="text-xs font-medium uppercase tracking-[0.18em] text-primary">
             For Personal Injury Attorneys
           </p>
-          <h1 className="mt-5 max-w-3xl text-4xl font-semibold tracking-tight sm:text-5xl">
+          <h1 className="mt-6 text-4xl font-semibold tracking-tight text-foreground sm:text-5xl md:text-6xl">
             What happens after you send us a client.
           </h1>
-          <p className="mt-6 max-w-2xl text-base text-primary-foreground/85">
+          <p className="mx-auto mt-6 max-w-2xl text-lg text-foreground/80">
             A board-certified internal medicine physician handles the intake personally and signs
             the report. Imaging and specialist referrals are set up while the case is still fresh.
             Everything happens by telemedicine, anywhere in Indiana.
           </p>
-          <div className="mt-9 flex flex-wrap gap-3">
+          <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <a
               href="tel:+13179534628"
-              className="inline-flex h-12 items-center gap-2 rounded-md bg-accent px-6 text-base font-semibold text-accent-foreground hover:brightness-95"
+              className="inline-flex h-12 items-center gap-2 rounded-md bg-accent px-6 text-base font-semibold text-accent-foreground shadow-sm hover:brightness-95"
             >
               <Phone className="h-4 w-4" /> (317) 953-4628
             </a>
             <a
               href="#contact"
-              className="inline-flex h-12 items-center rounded-md border border-primary-foreground/30 px-6 text-base font-semibold hover:bg-primary-foreground/10"
+              className="text-sm font-medium text-foreground/70 underline-offset-4 hover:text-primary hover:underline"
             >
-              Refer a client
+              Refer a client →
             </a>
           </div>
         </div>
@@ -189,7 +206,7 @@ function Home() {
       </section>
 
       {/* Contact */}
-      <section id="contact" className="border-t border-border bg-surface">
+      <section id="contact" className="border-t border-border">
         <div className="mx-auto max-w-3xl px-4 py-20 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-3xl font-semibold text-foreground">Refer a client</h2>

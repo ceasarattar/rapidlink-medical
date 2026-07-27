@@ -4,12 +4,12 @@ import { Wordmark } from "./Wordmark";
 
 export function SiteHeader() {
   return (
-    // Deep teal to match the logo artwork. Deliberately borderless: the hero
-    // directly below is also bg-primary, so the bar merges into it at rest
-    // and only reads as a distinct bar once scrolled over the light page body.
-    <header className="sticky top-0 z-50 w-full bg-primary text-primary-foreground">
-      <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link to="/" aria-label="RapidLink Medical Group, home">
+    // Light translucent bar with a hairline under it, so the hero image below
+    // starts clean instead of being cut off by a heavy block of color. The
+    // backdrop blur is what keeps the page body readable as it scrolls under.
+    <header className="sticky top-0 z-50 w-full border-b border-border bg-background/85 backdrop-blur">
+      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
+        <Link to="/">
           <Wordmark />
         </Link>
 

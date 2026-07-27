@@ -7,7 +7,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Physician-led medical intake for Indiana personal injury attorneys. A board-certified internal medicine physician sees your client by telemedicine and sends a signed report in two business days. Letters of Protection accepted.",
+          "Physician-led medical intake for Indiana personal injury attorneys. Board-certified internal medicine physicians see your client by telemedicine and send a signed report in two business days. Letters of Protection accepted.",
       },
     ],
   }),
@@ -75,8 +75,9 @@ function Home() {
             Everything the case needs from the first visit.
           </h2>
           <p className="mt-4 max-w-[58ch] text-muted-foreground">
-            One physician handles the whole intake, start to finish. The evaluation, the imaging
-            orders, and the specialist referrals all finish inside the same two day window.
+            The same physician handles a case from intake through sign-off, so nothing waits on a
+            handoff. The evaluation, the imaging orders, and the specialist referrals all finish
+            inside the same two day window.
           </p>
 
           {/* Hairline grid: 1px gaps over a border-coloured backdrop, so the
@@ -88,7 +89,7 @@ function Home() {
             />
             <Cell
               title="Done by an MD, not a tech"
-              body="A board-certified physician runs the intake personally, so the documentation holds up if challenged."
+              body="Board-certified physicians run the intake personally, so the documentation holds up if challenged."
             />
             <Cell
               title="Coordinated referrals"
@@ -168,7 +169,7 @@ function Home() {
 
           <div className="grid gap-px border border-border bg-border">
             <Fact value="2" label="business days to a signed report" />
-            <Fact value="1" label="physician from intake through sign-off" />
+            <Fact value="1" label="physician per case, from intake through sign-off" />
             <Fact value="$0" label="up front for your client on an LOP" />
           </div>
         </div>

@@ -95,7 +95,12 @@ function Home() {
           </p>
         </div>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
+        {/* Eight cards, so the column counts are all divisors of eight: 1, 2,
+            then 4. Three columns would leave the last row two-thirds empty.
+            Four columns waits for xl rather than lg because the container caps
+            at max-w-6xl: from xl up the cards are a steady 254px, whereas at
+            lg they would be 218px, narrow enough to wrap most titles. */}
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
           <Value
             Icon={Clock}
             title="24-48 hour turnaround"

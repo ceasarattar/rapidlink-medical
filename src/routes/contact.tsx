@@ -24,11 +24,11 @@ const MIN_FILL_MS = 3000;
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Refer a Client | RapidLink Medical" },
+      { title: "Contact | RapidLink Medical" },
       {
         name: "description",
         content:
-          "Send a referral to RapidLink Medical. Give us the attorney contact details and we will follow up the same business day with a secure intake link for your client.",
+          "Contact RapidLink Medical about our physician-led medical intake for Indiana personal injury attorneys. A member of our team responds within one business day.",
       },
     ],
   }),
@@ -117,10 +117,10 @@ function Contact() {
       <section className="mx-auto max-w-2xl px-4 py-24 sm:px-6 lg:px-8">
         <div className="rounded-2xl border border-border bg-card p-10 text-center">
           <CheckCircle2 className="mx-auto h-10 w-10 text-primary" />
-          <h1 className="mt-5 text-2xl font-semibold text-foreground">Referral received</h1>
+          <h1 className="mt-5 text-2xl font-semibold text-foreground">Message received</h1>
           <p className="mx-auto mt-3 max-w-md text-muted-foreground">
-            We will follow up the same business day and send your client a secure intake link. If
-            it is urgent, call us at (317) 953-4628.
+            A member of our team will be in touch within one business day. If it is urgent, call
+            us at (317) 953-4628.
           </p>
           <Link
             to="/"
@@ -142,11 +142,11 @@ function Contact() {
           For Personal Injury Attorneys
         </p>
         <h1 className="mt-4 text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
-          Refer a client
+          Get in touch
         </h1>
         <p className="mx-auto mt-5 max-w-xl text-muted-foreground">
-          Send us the attorney contact details and we will follow up the same business day with a
-          secure intake link for your client.
+          For inquiries about our services, fill in your details below and a member of our team
+          will be in touch within one business day.
         </p>
       </div>
 
@@ -162,7 +162,7 @@ function Contact() {
         className="relative mt-12"
       >
         <input type="hidden" name="access_key" value={ACCESS_KEY} />
-        <input type="hidden" name="subject" value="New attorney referral from rapidlinkmed.com" />
+        <input type="hidden" name="subject" value="New inquiry from rapidlinkmed.com" />
         <input type="hidden" name="from_name" value="RapidLink Medical website" />
 
         {/* Bot traps. Offscreen rather than display:none, because some bots
@@ -233,7 +233,7 @@ function Contact() {
             required
             disabled={submitting}
             className="mt-2 w-full rounded-md border border-input bg-card px-3 py-2 text-sm text-foreground outline-none placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-ring/30 disabled:opacity-60"
-            placeholder="Tell us the type of case and the best time to reach you."
+            placeholder="Tell us how we can help and the best time to reach you."
           />
         </div>
 
@@ -241,9 +241,9 @@ function Contact() {
           <strong className="text-foreground">
             Please do not include protected health information.
           </strong>{" "}
-          This form is not a secure channel for clinical details. Send only the attorney contact
-          details and we will route your client into our HIPAA-compliant eClinicalWorks system,
-          where all clinical intake, records, and reporting take place.
+          This form is not a secure channel for clinical details. Keep your message to contact
+          details and general questions. All clinical intake, records, and reporting take place
+          inside our HIPAA-compliant eClinicalWorks system.
         </p>
 
         {status.kind === "error" && (
@@ -262,7 +262,7 @@ function Contact() {
           className="mt-7 inline-flex h-12 w-full items-center justify-center gap-2 rounded-md bg-accent px-6 text-base font-semibold text-accent-foreground shadow-sm hover:brightness-95 disabled:opacity-70 sm:w-auto"
         >
           {submitting && <Loader2 className="h-4 w-4 animate-spin" />}
-          {submitting ? "Sending" : "Send referral"}
+          {submitting ? "Sending" : "Send message"}
         </button>
       </form>
 
@@ -280,7 +280,7 @@ function Contact() {
             </span>
           </a>
           <a
-            href="mailto:info@rapidlinkmed.com?subject=Attorney%20referral"
+            href="mailto:info@rapidlinkmed.com?subject=Website%20inquiry"
             className="flex items-center gap-4 rounded-2xl border border-border bg-card p-5 hover:border-primary"
           >
             <Mail className="h-5 w-5 shrink-0 text-primary" />

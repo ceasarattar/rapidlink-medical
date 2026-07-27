@@ -79,19 +79,19 @@ function Home() {
         </div>
       </section>
 
-      {/* Differentiators */}
+      {/* What the intake covers */}
       <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-xs font-medium uppercase tracking-[0.18em] text-primary">
-            Where we differ from the mill clinics
+            How we work
           </p>
           <h2 className="mt-3 text-3xl font-semibold text-foreground sm:text-4xl">
             Everything the case needs from the first visit.
           </h2>
           <p className="mt-4 text-muted-foreground">
-            Mill clinics stretch treatment out over months and hand you incomplete records well
-            after you needed them. We run it differently. One physician handles the whole intake,
-            and the records are on your desk in two business days.
+            One physician handles the whole intake, start to finish, and the signed records are on
+            your desk in two business days. The evaluation, the imaging orders, and the specialist
+            referrals are all finished inside that same window.
           </p>
         </div>
 

@@ -19,7 +19,7 @@ export function SiteFooter() {
                 Home
               </Link>
               <Link to="/contact" className="text-foreground hover:text-primary">
-                Refer a client
+                Get in touch
               </Link>
             </div>
 

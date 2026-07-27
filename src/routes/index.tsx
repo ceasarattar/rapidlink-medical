@@ -74,7 +74,7 @@ function Home() {
               to="/contact"
               className="text-sm font-medium text-foreground/70 underline-offset-4 hover:text-primary hover:underline"
             >
-              Refer a client →
+              Get in touch →
             </Link>
           </div>
         </div>
@@ -215,7 +215,7 @@ function Home() {
       <section id="contact" className="border-t border-border">
         <div className="mx-auto max-w-3xl px-4 py-20 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h2 className="text-3xl font-semibold text-foreground">Refer a client</h2>
+            <h2 className="text-3xl font-semibold text-foreground">Get in touch</h2>
             <p className="mx-auto mt-3 max-w-xl text-muted-foreground">
               Send us the attorney's name, firm, and best contact number. We'll follow up the same
               business day and send your client a secure intake link.
@@ -224,7 +224,7 @@ function Home() {
               to="/contact"
               className="mt-7 inline-flex h-12 items-center justify-center gap-2 rounded-md bg-accent px-6 text-base font-semibold text-accent-foreground shadow-sm hover:brightness-95"
             >
-              Open the referral form <ArrowRight className="h-4 w-4" />
+              Open the contact form <ArrowRight className="h-4 w-4" />
             </Link>
             <p className="mt-4 text-sm text-muted-foreground">Or reach us directly:</p>
           </div>

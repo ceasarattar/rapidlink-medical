@@ -1,27 +1,27 @@
 /**
- * Brand lockup: the ring mark as a rounded teal tile, then the name in text.
+ * Brand lockup: the ring mark, then the name in text.
  *
- * The source PNG is the mark on its own with the teal baked in, so nothing has
- * to be cropped out of it: --primary is pinned to that same teal (#0e4c5c),
- * which is what lets the tile sit flush on the light header with no visible
- * edge. Resizing is just the one h-/w- pair, since the art is square.
+ * The source PNG is the mark on its own with the teal baked in, and --primary
+ * is pinned to that same teal (#0e4c5c), so the mark sits on the teal band
+ * with no visible edge. Round rather than rounded-square, echoing the rings.
  *
- * The name is live text rather than baked-in lettering so it takes the page's
- * font and colors, and so it stays legible on the light header.
+ * Colour is inherited, not set, so the one component works on the teal band in
+ * both the header and the footer. The name is live text rather than the
+ * artwork's baked-in lettering so it takes the page's font.
  */
 export function Wordmark({ className = "" }: { className?: string }) {
   return (
-    <span className={`flex items-center gap-2.5 ${className}`}>
+    <span className={`flex items-center gap-3 ${className}`}>
       <img
         src="/RapidLink_Just_Logo_Teal_Background_Group_2400px copy.png"
         alt=""
         aria-hidden
-        width={36}
-        height={36}
-        className="h-9 w-9 shrink-0 rounded-md object-cover"
+        width={40}
+        height={40}
+        className="h-10 w-10 shrink-0 rounded-full object-cover"
       />
-      <span className="text-base font-semibold tracking-tight text-foreground">
-        RapidLink <span className="font-normal text-muted-foreground">Medical</span>
+      <span className="text-[0.9375rem] font-bold tracking-tight sm:text-[1.0625rem]">
+        RapidLink <span className="font-normal opacity-60">Medical Group</span>
       </span>
     </span>
   );

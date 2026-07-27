@@ -17,6 +17,10 @@ for a medical practice, aimed at Indiana personal injury **attorneys** who refer
 - **NEVER use em dashes or en dashes in any user-facing copy.** Use commas, colons,
   semicolons, or periods instead. (This file follows that rule too, deliberately.)
 - **NEVER add AI-generated stock imagery.**
+- **Say "interpreter", never "translator".** An interpreter handles live speech, a translator
+  handles written text, and these are video visits. All languages are welcome and an
+  interpreter can be added to any visit, so do not describe language support as
+  Spanish-only.
 - **NEVER name an individual physician** anywhere in the site or in commit messages.
   Role descriptions such as "board-certified MD" are fine; individual names are not.
 - **The audience is ATTORNEYS, not patients.** Keep all copy attorney-facing.

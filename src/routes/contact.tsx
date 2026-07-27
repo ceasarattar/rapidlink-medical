@@ -120,7 +120,7 @@ function Contact() {
           <h1 className="mt-5 text-2xl font-semibold text-foreground">Message received</h1>
           <p className="mx-auto mt-3 max-w-md text-muted-foreground">
             A member of our team will be in touch within one business day. If it is urgent, call
-            us at (317) 953-4628.
+            us at (317) 800-3730.
           </p>
           <Link
             to="/"
@@ -138,8 +138,8 @@ function Contact() {
   return (
     <section className="mx-auto max-w-3xl px-4 py-20 sm:px-6 lg:px-8">
       <div className="text-center">
-        <p className="text-xs font-medium uppercase tracking-[0.18em] text-primary">
-          For Personal Injury Attorneys
+        <p className="text-[0.6875rem] font-bold uppercase tracking-[0.28em] text-primary">
+          For personal injury attorneys
         </p>
         <h1 className="mt-4 text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
           Get in touch
@@ -270,12 +270,12 @@ function Contact() {
         <p className="text-sm text-muted-foreground">Prefer to skip the form?</p>
         <div className="mt-4 grid gap-4 sm:grid-cols-2">
           <a
-            href="tel:+13179534628"
+            href="tel:+13178003730"
             className="flex items-center gap-4 rounded-2xl border border-border bg-card p-5 hover:border-primary"
           >
             <Phone className="h-5 w-5 shrink-0 text-primary" />
             <span>
-              <span className="block font-semibold text-foreground">(317) 953-4628</span>
+              <span className="block font-semibold text-foreground">(317) 800-3730</span>
               <span className="block text-sm text-muted-foreground">
                 Call or text, fastest during business hours
               </span>

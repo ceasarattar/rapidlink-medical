@@ -33,8 +33,10 @@
 :root {
   --radius: 0.5rem;
 
-  /* warm neutral #F7F5F0 */
-  --background: oklch(0.969 0.008 85);
+  /* White. The teal band across the header and hero is the brand field; the
+     content below it is plain white so the band reads as deliberate rather
+     than as one tint sitting on another. */
+  --background: oklch(1 0 0);
   /* charcoal #222 */
   --foreground: oklch(0.24 0 0);
 

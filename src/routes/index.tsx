@@ -28,7 +28,10 @@ function Home() {
       <section className="relative isolate overflow-hidden bg-primary text-primary-foreground">
         {/* Rings echoing the mark. Decorative, and hidden below lg so they
             never crowd the headline on a phone. */}
-        <div aria-hidden className="pointer-events-none absolute inset-0 hidden overflow-hidden lg:block">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 hidden overflow-hidden lg:block"
+        >
           <span className="absolute -right-20 -top-24 h-[26rem] w-[26rem] rounded-full border-[2.5rem] border-cream/25 opacity-50" />
           <span className="absolute right-28 top-24 h-80 w-80 rounded-full border-[2.5rem] border-accent/30 opacity-50" />
         </div>
@@ -38,11 +41,11 @@ function Home() {
             For personal injury attorneys in Indiana
           </p>
           <h1 className="mt-7 max-w-[18ch] text-4xl font-bold leading-[0.98] tracking-[-0.035em] sm:text-5xl lg:text-[5rem]">
-            Two business days from referral to <span className="text-accent">signed report.</span>
+            2 business days from referral to <span className="text-accent">signed report.</span>
           </h1>
           <p className="mt-7 max-w-[44ch] text-lg text-primary-foreground/65">
-            A board-certified internal medicine physician handles the intake personally and signs
-            the report. Imaging and specialist referrals are set up while the case is still fresh,
+            Our team consists of board-certified internal medicine physicians who handle the intake
+            personally. Imaging and specialist referrals are set up while the case is still fresh,
             entirely by telemedicine.
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-3.5">

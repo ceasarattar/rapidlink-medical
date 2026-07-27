@@ -119,8 +119,8 @@ function Contact() {
           <CheckCircle2 className="mx-auto h-10 w-10 text-primary" />
           <h1 className="mt-5 text-2xl font-semibold text-foreground">Message received</h1>
           <p className="mx-auto mt-3 max-w-md text-muted-foreground">
-            A member of our team will be in touch within one business day. If it is urgent, call
-            us at (317) 800-3730.
+            A member of our team will be in touch within one business day. If it is urgent, call us
+            at (317) 800-3730.
           </p>
           <Link
             to="/"
@@ -136,168 +136,181 @@ function Contact() {
   const submitting = status.kind === "submitting";
 
   return (
-    <section className="mx-auto max-w-3xl px-4 py-20 sm:px-6 lg:px-8">
-      <div className="text-center">
-        <p className="text-[0.6875rem] font-bold uppercase tracking-[0.28em] text-primary">
-          For personal injury attorneys
-        </p>
-        <h1 className="mt-4 text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
-          Get in touch
-        </h1>
-        <p className="mx-auto mt-5 max-w-xl text-muted-foreground">
-          For inquiries about our services, fill in your details below and a member of our team
-          will be in touch within one business day.
-        </p>
-      </div>
+    <div>
+      {/* Same teal band as the header and the landing page hero, so the two
+          routes open the same way and the header does not sit on a bare page. */}
+      <section className="relative isolate overflow-hidden bg-primary text-primary-foreground">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 hidden overflow-hidden lg:block"
+        >
+          <span className="absolute -right-24 -top-40 h-[26rem] w-[26rem] rounded-full border-[2.5rem] border-cream/25 opacity-50" />
+        </div>
 
-      {/* The form posts straight to Web3Forms as a plain HTML form when
+        <div className="relative z-10 mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-20 lg:px-8">
+          <p className="text-[0.6875rem] font-bold uppercase tracking-[0.28em] text-accent">
+            For personal injury attorneys
+          </p>
+          <h1 className="mt-6 text-4xl font-bold leading-[0.98] tracking-[-0.035em] sm:text-5xl">
+            Get in touch
+          </h1>
+          <p className="mt-6 max-w-[48ch] text-lg text-primary-foreground/65">
+            For inquiries about our services, fill in your details below and a member of our team
+            will be in touch within one business day.
+          </p>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+        {/* The form posts straight to Web3Forms as a plain HTML form when
           scripting is unavailable. With scripting on, the submit handler
           intercepts, runs the bot checks, and posts the same FormData by
           fetch, so the hidden inputs below are the single source of truth for
           both paths. */}
-      <form
-        action={WEB3FORMS_ENDPOINT}
-        method="POST"
-        onSubmit={handleSubmit}
-        className="relative mt-12"
-      >
-        <input type="hidden" name="access_key" value={ACCESS_KEY} />
-        <input type="hidden" name="subject" value="New inquiry from rapidlinkmed.com" />
-        <input type="hidden" name="from_name" value="RapidLink Medical website" />
+        <form
+          action={WEB3FORMS_ENDPOINT}
+          method="POST"
+          onSubmit={handleSubmit}
+          className="relative"
+        >
+          <input type="hidden" name="access_key" value={ACCESS_KEY} />
+          <input type="hidden" name="subject" value="New inquiry from rapidlinkmed.com" />
+          <input type="hidden" name="from_name" value="RapidLink Medical website" />
 
-        {/* Bot traps. Offscreen rather than display:none, because some bots
+          {/* Bot traps. Offscreen rather than display:none, because some bots
             skip anything they can tell is not rendered. aria-hidden and
             tabindex -1 keep them off every path a person can take. The second
             field is named so that no browser autofill heuristic recognises
             it, which is what keeps a password manager from filling it and
             flagging a real attorney as a bot. */}
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute -left-[9999px] top-0 h-0 w-0 overflow-hidden"
-        >
-          <label>
-            Do not fill this in
-            <input type="checkbox" name="botcheck" tabIndex={-1} autoComplete="off" />
-          </label>
-          <label>
-            Leave this field empty
-            <input type="text" name="rl_check" tabIndex={-1} autoComplete="off" />
-          </label>
-        </div>
-
-        <div className="grid gap-5 sm:grid-cols-2">
-          <Field
-            id="name"
-            name="name"
-            label="Your name"
-            autoComplete="name"
-            required
-            disabled={submitting}
-          />
-          <Field
-            id="organization"
-            name="organization"
-            label="Firm or organization"
-            hint="(optional)"
-            autoComplete="organization"
-            disabled={submitting}
-          />
-          <Field
-            id="email"
-            name="email"
-            type="email"
-            label="Email"
-            autoComplete="email"
-            required
-            disabled={submitting}
-          />
-          <Field
-            id="phone"
-            name="phone"
-            type="tel"
-            label="Phone number"
-            autoComplete="tel"
-            required
-            disabled={submitting}
-          />
-        </div>
-
-        <div className="mt-5">
-          <label htmlFor="message" className="block text-sm font-medium text-foreground">
-            Message <span className="text-muted-foreground">(required)</span>
-          </label>
-          <textarea
-            id="message"
-            name="message"
-            rows={6}
-            required
-            disabled={submitting}
-            className="mt-2 w-full rounded-md border border-input bg-card px-3 py-2 text-sm text-foreground outline-none placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-ring/30 disabled:opacity-60"
-            placeholder="Tell us how we can help and the best time to reach you."
-          />
-        </div>
-
-        <p className="mt-4 rounded-lg border border-border bg-card p-4 text-xs text-muted-foreground">
-          <strong className="text-foreground">
-            Please do not include protected health information.
-          </strong>{" "}
-          This form is not a secure channel for clinical details. Keep your message to contact
-          details and general questions. All clinical intake, records, and reporting take place
-          inside our HIPAA-compliant eClinicalWorks system.
-        </p>
-
-        {status.kind === "error" && (
-          <p
-            role="alert"
-            className="mt-5 flex items-start gap-3 rounded-lg border border-border bg-card p-4 text-sm text-foreground"
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute -left-[9999px] top-0 h-0 w-0 overflow-hidden"
           >
-            <AlertCircle className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-            {status.message}
+            <label>
+              Do not fill this in
+              <input type="checkbox" name="botcheck" tabIndex={-1} autoComplete="off" />
+            </label>
+            <label>
+              Leave this field empty
+              <input type="text" name="rl_check" tabIndex={-1} autoComplete="off" />
+            </label>
+          </div>
+
+          <div className="grid gap-5 sm:grid-cols-2">
+            <Field
+              id="name"
+              name="name"
+              label="Your name"
+              autoComplete="name"
+              required
+              disabled={submitting}
+            />
+            <Field
+              id="organization"
+              name="organization"
+              label="Firm or organization"
+              hint="(optional)"
+              autoComplete="organization"
+              disabled={submitting}
+            />
+            <Field
+              id="email"
+              name="email"
+              type="email"
+              label="Email"
+              autoComplete="email"
+              required
+              disabled={submitting}
+            />
+            <Field
+              id="phone"
+              name="phone"
+              type="tel"
+              label="Phone number"
+              autoComplete="tel"
+              required
+              disabled={submitting}
+            />
+          </div>
+
+          <div className="mt-5">
+            <label htmlFor="message" className="block text-sm font-medium text-foreground">
+              Message <span className="text-muted-foreground">(required)</span>
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              rows={6}
+              required
+              disabled={submitting}
+              className="mt-2 w-full rounded-md border border-input bg-card px-3 py-2 text-sm text-foreground outline-none placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-ring/30 disabled:opacity-60"
+              placeholder="Tell us how we can help and the best time to reach you."
+            />
+          </div>
+
+          <p className="mt-4 rounded-lg border border-border bg-card p-4 text-xs text-muted-foreground">
+            <strong className="text-foreground">
+              Please do not include protected health information.
+            </strong>{" "}
+            This form is not a secure channel for clinical details. Keep your message to contact
+            details and general questions. All clinical intake, records, and reporting take place
+            inside our HIPAA-compliant eClinicalWorks system.
           </p>
-        )}
 
-        <button
-          type="submit"
-          disabled={submitting}
-          className="mt-7 inline-flex h-12 w-full items-center justify-center gap-2 rounded-md bg-accent px-6 text-base font-semibold text-accent-foreground shadow-sm hover:brightness-95 disabled:opacity-70 sm:w-auto"
-        >
-          {submitting && <Loader2 className="h-4 w-4 animate-spin" />}
-          {submitting ? "Sending" : "Send message"}
-        </button>
-      </form>
+          {status.kind === "error" && (
+            <p
+              role="alert"
+              className="mt-5 flex items-start gap-3 rounded-lg border border-border bg-card p-4 text-sm text-foreground"
+            >
+              <AlertCircle className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+              {status.message}
+            </p>
+          )}
 
-      <div className="mt-14 border-t border-border pt-8">
-        <p className="text-sm text-muted-foreground">Prefer to skip the form?</p>
-        <div className="mt-4 grid gap-4 sm:grid-cols-2">
-          <a
-            href="tel:+13178003730"
-            className="flex items-center gap-4 rounded-2xl border border-border bg-card p-5 hover:border-primary"
+          <button
+            type="submit"
+            disabled={submitting}
+            className="mt-7 inline-flex h-12 w-full items-center justify-center gap-2 rounded-md bg-accent px-6 text-base font-semibold text-accent-foreground shadow-sm hover:brightness-95 disabled:opacity-70 sm:w-auto"
           >
-            <Phone className="h-5 w-5 shrink-0 text-primary" />
-            <span>
-              <span className="block font-semibold text-foreground">(317) 800-3730</span>
-              <span className="block text-sm text-muted-foreground">
-                Call or text, fastest during business hours
+            {submitting && <Loader2 className="h-4 w-4 animate-spin" />}
+            {submitting ? "Sending" : "Send message"}
+          </button>
+        </form>
+
+        <div className="mt-14 border-t border-border pt-8">
+          <p className="text-sm text-muted-foreground">Prefer to skip the form?</p>
+          <div className="mt-4 grid gap-4 sm:grid-cols-2">
+            <a
+              href="tel:+13178003730"
+              className="flex items-center gap-4 rounded-2xl border border-border bg-card p-5 hover:border-primary"
+            >
+              <Phone className="h-5 w-5 shrink-0 text-primary" />
+              <span>
+                <span className="block font-semibold text-foreground">(317) 800-3730</span>
+                <span className="block text-sm text-muted-foreground">
+                  Call or text, fastest during business hours
+                </span>
               </span>
-            </span>
-          </a>
-          <a
-            href="mailto:info@rapidlinkmed.com?subject=Website%20inquiry"
-            className="flex items-center gap-4 rounded-2xl border border-border bg-card p-5 hover:border-primary"
-          >
-            <Mail className="h-5 w-5 shrink-0 text-primary" />
-            <span className="min-w-0">
-              <span className="block truncate font-semibold text-foreground">
-                info@rapidlinkmed.com
+            </a>
+            <a
+              href="mailto:info@rapidlinkmed.com?subject=Website%20inquiry"
+              className="flex items-center gap-4 rounded-2xl border border-border bg-card p-5 hover:border-primary"
+            >
+              <Mail className="h-5 w-5 shrink-0 text-primary" />
+              <span className="min-w-0">
+                <span className="block truncate font-semibold text-foreground">
+                  info@rapidlinkmed.com
+                </span>
+                <span className="block text-sm text-muted-foreground">
+                  We reply the same business day
+                </span>
               </span>
-              <span className="block text-sm text-muted-foreground">
-                We reply the same business day
-              </span>
-            </span>
-          </a>
+            </a>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 }
 

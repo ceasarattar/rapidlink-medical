@@ -29,10 +29,7 @@ export function SiteFooter() {
               <h2 className="text-[0.6875rem] font-bold uppercase tracking-[0.28em] text-accent">
                 Contact us
               </h2>
-              <a
-                href="tel:+13178003730"
-                className="text-primary-foreground/85 hover:text-accent"
-              >
+              <a href="tel:+13178003730" className="text-primary-foreground/85 hover:text-accent">
                 (317) 800-3730
               </a>
               <a

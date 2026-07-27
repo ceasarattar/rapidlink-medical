@@ -14,9 +14,14 @@ export function SiteFooter() {
           </div>
 
           <div className="flex flex-col gap-6 text-sm">
-            <Link to="/" className="text-foreground hover:text-primary">
-              Home
-            </Link>
+            <div className="flex flex-col gap-2">
+              <Link to="/" className="text-foreground hover:text-primary">
+                Home
+              </Link>
+              <Link to="/contact" className="text-foreground hover:text-primary">
+                Refer a client
+              </Link>
+            </div>
 
             <div className="flex flex-col gap-2">
               <h2 className="text-xs font-medium uppercase tracking-[0.2em] text-primary">

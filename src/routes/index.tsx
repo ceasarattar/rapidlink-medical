@@ -91,13 +91,19 @@ function Home() {
       {/* The problem this practice exists to solve */}
       <section className="border-b border-border">
         <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
-          <p className="text-[0.6875rem] font-bold uppercase tracking-[0.28em] text-primary">
-            Why the record decides the case
-          </p>
-          <h2 className="mt-3.5 max-w-[24ch] text-3xl font-bold leading-tight tracking-[-0.03em] text-foreground sm:text-4xl">
-            Most medical records were never written with your case in mind.
-          </h2>
-          <div className="mt-6 grid gap-6 lg:grid-cols-2 lg:gap-12">
+          {/* Centred heading over a single measure. The body stays left
+              aligned: centred prose this long is markedly harder to read,
+              because every line starts in a different place. */}
+          <div className="mx-auto max-w-[34rem] text-center">
+            <p className="text-[0.6875rem] font-bold uppercase tracking-[0.28em] text-primary">
+              Why the record decides the case
+            </p>
+            <h2 className="mt-3.5 text-3xl font-bold leading-tight tracking-[-0.03em] text-foreground sm:text-4xl">
+              Most medical records were never written with your case in mind.
+            </h2>
+          </div>
+
+          <div className="mx-auto mt-8 grid max-w-[62ch] gap-5">
             <p className="text-muted-foreground">
               Most personal injury cases are won or lost on the medical record. A rushed urgent-care
               note that never mentions mechanism. A chart that is silent on causation. Imaging that
@@ -178,9 +184,10 @@ function Home() {
               Your demand package should not wait weeks for records.
             </h2>
             <p className="mt-4 text-muted-foreground">
-              Report delivered in 24 to 48 hours from the completed evaluation. Referral to
-              evaluation is fast: telehealth means no transportation barriers and no clinic queues,
-              and clients can complete intake from their phone.
+              One window covers all of it: the client is seen, the evaluation is done, imaging
+              orders and specialist referrals are placed, and the signed report reaches your office,
+              inside 24 to 48 hours. Telehealth means no transportation barriers and no clinic
+              queues, and clients can complete intake from their phone.
             </p>
           </div>
           <div>
@@ -216,18 +223,21 @@ function Home() {
 
           {/* The chain. From lg up each ring is pulled 22px left so consecutive
               steps interlock the way the two rings in the mark do. */}
-          <ol className="mt-13 grid gap-8 lg:grid-cols-4 lg:gap-0">
+          <ol className="mt-13 grid gap-8 sm:grid-cols-2 lg:grid-cols-5 lg:gap-0">
             <Step n={1} title="You refer the client">
               Call or email with the basics. No health details needed to start.
             </Step>
             <Step n={2} title="We send one link">
               By text or email, direct to your client. Works on any phone.
             </Step>
-            <Step n={3} title="Client completes the visit">
-              Intake, consents, and video visit, with an interpreter on request.
+            <Step n={3} title="Client completes intake">
+              Consents and intake on their phone, with no pre-filled answers.
             </Step>
-            <Step n={4} title="Report reaches your office">
-              Signed report plus imaging coordination within 24 to 48 hours.
+            <Step n={4} title="We schedule the visit">
+              Seen by a physician inside the window, interpreter available in any language.
+            </Step>
+            <Step n={5} title="Report reaches your office">
+              Signed report, imaging orders, and referrals, all inside 24 to 48 hours.
             </Step>
           </ol>
         </div>

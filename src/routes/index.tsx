@@ -91,31 +91,40 @@ function Home() {
       {/* The problem this practice exists to solve */}
       <section className="border-b border-border">
         <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
-          {/* Centred heading over a single measure. The body stays left
-              aligned: centred prose this long is markedly harder to read,
-              because every line starts in a different place. */}
-          <div className="mx-auto max-w-[34rem] text-center">
-            <p className="text-[0.6875rem] font-bold uppercase tracking-[0.28em] text-primary">
-              Why the record decides the case
-            </p>
-            <h2 className="mt-3.5 text-3xl font-bold leading-tight tracking-[-0.03em] text-foreground sm:text-4xl">
-              Most medical records were never written with your case in mind.
-            </h2>
-          </div>
+          {/* The gap and the fix as two halves divided by a rule, so the
+              structure carries the argument before a word is read. The rule
+              and the inner padding only appear once the columns exist; below
+              lg the two stack with ordinary spacing. */}
+          <div className="grid gap-8 lg:grid-cols-2 lg:gap-0">
+            <div className="lg:pr-12">
+              <p className="text-[0.6875rem] font-bold uppercase tracking-[0.28em] text-muted-foreground">
+                The gap
+              </p>
+              <h2 className="mt-3 text-xl font-bold tracking-[-0.02em] text-foreground">
+                Most medical records were never written with your case in mind.
+              </h2>
+              <p className="mt-3.5 text-muted-foreground">
+                Most personal injury cases are won or lost on the medical record. A rushed
+                urgent-care note that never mentions mechanism. A chart that is silent on causation.
+                Imaging that was never ordered, or ordered without documented medical necessity. By
+                the time you see the gap, it is baked into the record.
+              </p>
+            </div>
 
-          <div className="mx-auto mt-8 grid max-w-[62ch] gap-5">
-            <p className="text-muted-foreground">
-              Most personal injury cases are won or lost on the medical record. A rushed urgent-care
-              note that never mentions mechanism. A chart that is silent on causation. Imaging that
-              was never ordered, or ordered without documented medical necessity. By the time you
-              see the gap, it is baked into the record.
-            </p>
-            <p className="text-muted-foreground">
-              RapidLink Medical Group was built to close that gap. Every client is evaluated by one
-              of our board-certified internal medicine physicians, and every evaluation produces a
-              comprehensive medical-legal report designed to withstand scrutiny, from the adjuster's
-              first review to a defense medical examiner's cross-examination.
-            </p>
+            <div className="lg:border-l lg:border-border lg:pl-12">
+              <p className="text-[0.6875rem] font-bold uppercase tracking-[0.28em] text-primary">
+                How we close it
+              </p>
+              <h2 className="mt-3 text-xl font-bold tracking-[-0.02em] text-foreground">
+                Every evaluation is built to be read by the other side.
+              </h2>
+              <p className="mt-3.5 text-muted-foreground">
+                RapidLink Medical Group was built to close that gap. Every client is evaluated by
+                one of our board-certified internal medicine physicians, and every evaluation
+                produces a comprehensive medical-legal report designed to withstand scrutiny, from
+                the adjuster's first review to a defense medical examiner's cross-examination.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -184,10 +193,10 @@ function Home() {
               Your demand package should not wait weeks for records.
             </h2>
             <p className="mt-4 text-muted-foreground">
-              One window covers all of it: the client is seen, the evaluation is done, imaging
-              orders and specialist referrals are placed, and the signed report reaches your office,
-              inside 24 to 48 hours. Telehealth means no transportation barriers and no clinic
-              queues, and clients can complete intake from their phone.
+              It is one process inside one window. The client is seen, the evaluation is done, the
+              imaging orders and specialist referrals are placed, and the signed report reaches your
+              office, all inside the same 24 to 48 hours. Telehealth means no transportation
+              barriers and no clinic queues, and clients can complete intake from their phone.
             </p>
           </div>
           <div>
@@ -231,7 +240,7 @@ function Home() {
               By text or email, direct to your client. Works on any phone.
             </Step>
             <Step n={3} title="Client completes intake">
-              Consents and intake on their phone, with no pre-filled answers.
+              Consents and intake on their phone.
             </Step>
             <Step n={4} title="We schedule the visit">
               Seen by a physician inside the window, interpreter available in any language.
